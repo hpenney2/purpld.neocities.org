@@ -1,0 +1,103 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+@font-face {
+  font-family: nihonium;
+  src: url(fonts/nihonium113.ttf);
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}
+
+body {
+  background: #000000;
+  background: linear-gradient(
+    151deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(180, 107, 255, 1) 100%
+  );
+  background-size: 250% 250%;
+  animation: gradient 15s ease infinite;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+@keyframes gradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 1200px;
+  /* animation: 2s ease 0s 1 widthThingy; */
+  position: relative;
+  padding: 10px;
+  /* background: rgba(0, 0, 0, 0.25); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25));
+  border: solid black 5px;
+  min-height: 100vh;
+}
+
+/* @keyframes widthThingy {
+  from {
+    max-width: 1000px;
+    opacity: 0;
+  }
+
+  to {
+    max-width: 1200px;
+  }
+} */
+
+h1 {
+  text-align: center;
+}
+
+* {
+  font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+.pixel {
+  font-family: nihonium;
+}
+
+.bottomBar {
+  /* background-color: #000000; */
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+  opacity: 80%;
+}
+
+.bottomBar > * {
+  /* height: 100%; */
+  display: block;
+  float: right;
+}
+
+.bannerWrapper {
+  text-align: center;
+  background-color: #000000;
+}
