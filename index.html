@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>~ PURPLD'S WORLD ~</title>
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preload" href="fonts/nihonium113.ttf" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
   </head>
   <body>
+    <div id="bgWrapper">
+      <div id="scrollingBg"></div>
+    </div>
+
     <div class="bottomBar">
-      <img src="/neocities.png" />
+      <img src="/neocities.png" alt="hosted by neocities button" />
       <img
         style="
           /* position: absolute; */
@@ -18,6 +26,7 @@
           float: left;
         "
         src="img/pixel_sign.png"
+        alt="signature logo"
       />
     </div>
 
@@ -30,25 +39,46 @@
       </p>
       <h1>PURPLD'S WORLD</h1> -->
       <div class="bannerWrapper">
-        <img class="banner" src="img/banner.png" alt="PURPLD'S WORLD" />
+        <h1 style="margin: 0; font-size: unset">
+          <img class="banner" src="img/banner.png" alt="~ PURPLD'S WORLD ~" />
+        </h1>
       </div>
       <!-- <p>Welcome!</p> -->
-      <div class="center"><img src="img/welcome.gif" alt="Welcome" /></div>
+      <div id="welcome" class="center">
+        <img src="img/welcome.gif" alt="Welcome" />
+      </div>
 
       <p><i>heavily</i> under construction lol</p>
-      <p>my interests!</p>
-      <ul>
-        <li>programming (very into!)</li>
-        <li>games</li>
-        <li>furries! (dopamine)</li>
-      </ul>
 
-      <p>socialz</p>
-      <ul>
-        <li>
-          <a href="https://bsky.app/profile/hpenney2.bsky.social">Bluesky</a>
-        </li>
-      </ul>
+      <div class="centerContainer">
+        <!-- <p>WOAH!</p> -->
+        <div id="intro" style="text-align: justify">
+          <h2 class="pixel center">hi!</h2>
+          <p>
+            i'm <code class="boldText">@purpld</code>! i'm from and currently
+            live in the United States
+            <img src="img/us.png" class="inlineImg" aria-hidden="true" />.
+          </p>
+        </div>
+        <div class="featuredSong">
+          <h2 class="pixel center">current fav song(s)</h2>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/7kvQptbfqq5b4MWRQOMrZC?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer center boldText">
+      <code>:3</code> <br />
+      <p>Author ~ <code>@purpld</code> / <code>@hpenney2</code></p>
     </div>
   </body>
 </html>
