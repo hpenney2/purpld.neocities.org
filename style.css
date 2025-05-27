@@ -290,3 +290,26 @@ h2.pixel, h1.pixel {
 .creditsString {
   font-weight: bold;
 }
+
+#musicButton {
+  position: absolute;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  background-image: url("/img/player/play.png");
+  background-size: cover;
+  width: 3em;
+  height: 3em;
+}
+
+#musicButton:hover {
+  background-image: url("/img/player/play_hover.png");
+}
+
+#musicButton.musicPlaying {
+  background-image: url("/img/player/stop.png");
+}
+
+#musicButton.musicPlaying:hover {
+  background-image: url("/img/player/stop_hover.png");
+}
