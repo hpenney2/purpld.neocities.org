@@ -284,7 +284,7 @@ h2.pixel, h1.pixel {
 }
 
 #creditsList > li + li {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .creditsString {
