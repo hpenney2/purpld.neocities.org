@@ -4,15 +4,16 @@
     <title>~ PURPLD'S WORLD ~</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preload" href="fonts/nihonium113.ttf" />
+    <link rel="preload" as="image" href="/img/checkerboard.png" />
+    <link rel="preload" as="font" href="fonts/nihonium113.ttf" />
 
     <!-- yes, i know for production this really should be one bundled minified JS file but i don't really care for my silly personal website so :3
          for now, it's only one script -->
     <script src="/script/player.js"></script>
-    <link rel="prefetch" href="/img/player/play.png" />
-    <link rel="prefetch" href="/img/player/play_hover.png" />
-    <link rel="prefetch" href="/img/player/stop.png" />
-    <link rel="prefetch" href="/img/player/stop_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
 
     <meta
       name="viewport"
@@ -35,7 +36,7 @@
       <button
         id="musicButton"
         title="Play music"
-        onclick="toggleAudio(this)"
+        onclick="toggleAudio()"
       ></button>
 
       <div class="bannerWrapper">
