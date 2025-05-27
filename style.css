@@ -36,11 +36,11 @@ body {
   height: 100%;
 }
 
-p {
+p, li, a {
   font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
+code, .code {
   font-family: 'Ubuntu Mono', Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
@@ -178,7 +178,7 @@ h1 {
   text-rendering: geometricPrecision;
 }
 
-h2.pixel {
+h2.pixel, h1.pixel {
   font-weight: normal;
   font-size: xx-large;
 }
@@ -208,6 +208,12 @@ h2.pixel {
   padding: 3em;
   display: block;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.footer img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .bannerWrapper {
@@ -242,6 +248,7 @@ h2.pixel {
 
 #intro {
   flex-grow: 2;
+  flex-basis: min-content;
 }
 
 .inlineImg {
@@ -249,4 +256,37 @@ h2.pixel {
   height: 1rem;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#creditsList {
+  padding: 0em;
+  margin: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  #creditsList {
+    padding: 1em;
+  }
+}
+
+#creditsList {
+  list-style: none;
+  margin: 0px;
+}
+
+#creditsList > li:nth-child(odd) {
+  text-align: left;
+}
+
+
+#creditsList > li:nth-child(even) {
+  text-align: right;
+}
+
+#creditsList > li + li {
+  margin-top: 1em;
+}
+
+.creditsString {
+  font-weight: bold;
 }
