@@ -106,7 +106,7 @@ body {
 
 #container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
   /* animation: 2s ease 0s 1 widthThingy; */
   position: relative;
   padding: 10px;
@@ -117,6 +117,18 @@ body {
   border: solid black 5px;
   min-height: 100vh;
 }
+
+/* https://stackoverflow.com/questions/5159594/placing-a-div-sidebar-next-to-a-centered-div
+   i may rethink this at some point, but i don't feel like dealing with responsiveness for this right now lol
+   besides, i like the old internet center-only feel and i have a bunch of space with the flexbox */
+/* div.leftBar {
+  border: solid black 5px;
+  height: 100%;
+  margin-bottom: -10px;
+  position: absolute;
+  top: -5px;
+  right: 100%;
+} */
 
 /* @keyframes widthThingy {
   from {
