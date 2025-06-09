@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: nihonium;
-  src: url(fonts/nihonium113.ttf);
+  src: url(/fonts/nihonium113.ttf);
 }
 
 @keyframes bgScroll {
@@ -57,7 +57,7 @@ code, .code {
   /* display: block; */
   /* overflow: hidden; */
   background-repeat: repeat;
-  background-image: url(img/checkerboard.png);
+  background-image: url(/img/checkerboard.png);
   background-attachment: fixed;
   animation: bgScroll 10s linear infinite;
   /* filter: blur(); */
@@ -246,6 +246,12 @@ h2.pixel, h1.pixel {
   gap: 1em;
 }
 
+@media only screen and (max-width: 500px) {
+  .centerContainer > div {
+    flex-basis: 100%;
+  }
+}
+
 .boldText {
   font-weight: bold;
   filter: drop-shadow(3px 3px gray);
@@ -261,7 +267,7 @@ h2.pixel, h1.pixel {
   display: flex;
   flex-wrap: nowrap;
   /* justify-content: center; */
-  /* align-items: center; */
+  align-items: center;
   flex-direction: column;
 }
 
@@ -286,13 +292,9 @@ h2.pixel, h1.pixel {
 
 .inlineImg {
   display: inline-block;
-  height: 1rem;
+  height: 1em;
   margin-left: 5px;
   margin-right: 5px;
-}
-
-#socials {
-  /* flex-basis: 40%; */
 }
 
 #creditsList {
@@ -331,6 +333,7 @@ h2.pixel, h1.pixel {
 #musicButton {
   position: absolute;
   right: 5px;
+  top: 5px;
   background-color: transparent;
   border: none;
   background-image: url("/img/player/play.png");
@@ -349,4 +352,109 @@ h2.pixel, h1.pixel {
 
 #musicButton.musicPlaying:hover {
   background-image: url("/img/player/stop_hover.png");
+}
+
+.button {
+  image-rendering: pixelated;
+}
+
+/* effect inspired by https://theabsoluterealm.com/main/CoolStuff/buttondex :3 */
+.button:hover {
+  transform: scale(1.2);
+}
+
+
+/* About Page */
+#aboutWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.horizontalBoxy {
+  /* margin: 0 auto; */
+  margin: 1em;
+  width: 100%;
+  /* animation: 2s ease 0s 1 widthThingy; */
+  position: relative;
+  padding: 10px;
+  /* background: rgba(0, 0, 0, 0.25); */
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45)); */
+  background: rgba(0, 0, 0, 0.80);
+  /* backdrop-filter: blur(5px); */
+  border: solid black 5px;
+  border-style: solid none;
+  text-align: center;
+}
+
+.horizontalFlexy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  /* max-height: 50vh; */
+}
+
+@media not screen and (max-width: 1200px) {
+  .scrollListWrapper {
+    width: 25%;
+  }
+
+}
+
+.scrollList {
+  overflow: hidden;
+  overflow-y: scroll;
+  /* background-color: #000000; */
+  /* width: 15%; */
+  list-style: none;
+  width: 100%;
+  max-height: 15em;
+
+  border: solid white 1px;
+  padding: 1em;
+
+  scrollbar-color: black white;
+}
+
+.scrollList ul {
+  list-style: none;
+}
+
+/* .scrollList li::before {
+  content: url("img/MediumExperiencePickup.png");
+  zoom: 50%;
+  vertical-align: middle;
+} */
+
+.scrollList li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 1em;
+  height: 1em;
+  width: 1em;
+
+  background-image: url("/img/MediumExperiencePickup.png");
+  background-size: 1em 1em;
+  vertical-align: middle;
+}
+.scrollList > li {
+  font-weight: bolder;
+}
+
+.scrollList > li + li {
+  margin-top: 1em;
+}
+
+.scrollList li > ul > li::before {
+  background-image: url("/img/MediumExperiencePickup_inverted.png");
+}
+
+.scrollList li > ul > li {
+  font-weight: initial;
 }
