@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: nihonium;
-  src: url(/fonts/nihonium113.ttf);
+  src: url(/fonts/nihonium113.ttf), local('MS UI Gothic');
 }
 
 @keyframes bgScroll {
@@ -262,7 +262,7 @@ h2.pixel, h1.pixel {
   filter: drop-shadow(3px 3px gray);
 }
 
-.centerContainer > div {
+.centerContainer > div, .centerContainer > nav {
   background: rgba(0, 0, 0, 0.70);
   border: 0.3em solid #000000;
   border-radius: 10px;
@@ -294,6 +294,32 @@ h2.pixel, h1.pixel {
   /* flex-shrink: 0; */
   flex-basis: 50%;
 }
+
+#navBox {
+  flex-basis: 100%;
+  padding: 1em !important;
+}
+
+#navBox > .innerBox {
+  flex-flow: row wrap;
+  gap: 1em;
+}
+
+#navBox * {
+  color: white;
+}
+
+/* yeah so the seperator is clickable ;w;
+   my solution for now is to just manually add a seperator element which i'll CSS up next time I need it
+   https://stackoverflow.com/a/41631388 */
+/* #navBox > .innerBox > * + *::before {
+  content: "/";
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: none;
+} */
 
 .inlineImg {
   display: inline-block;
