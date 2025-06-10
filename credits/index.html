@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <style>
+      @keyframes backgroundAnim {
+        from {
+          background-position: 100% 0%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        to {
+          background-position: 100% 0%;
+        }
+      }
       body {
+        animation: backgroundAnim 7s linear infinite;
         background-image: linear-gradient(
           to bottom,
           rgb(0, 0, 0),
           30%,
           rgb(32, 32, 32)
         );
+        background-size: auto 125%;
         margin: 2em;
       }
     </style>
@@ -45,6 +58,14 @@
           >sourced from Tenor</a
         >
         because Twitter&reg;)
+      </li>
+      <li>
+        GitHub pixel logo
+        <a
+          class="creditsString"
+          href="https://www.deviantart.com/panfrieddupa/art/Github-Pixel-Logo-for-Personal-Portfolio-923686063"
+          >by panfrieddupa on DeviantArt</a
+        >
       </li>
       <li>
         the <em>many</em> Google search hits which helped me deal with CSS and

@@ -228,6 +228,11 @@ h2.pixel, h1.pixel {
   height: 100%;
 }
 
+.footerBadges img {
+  max-height: 4em;
+  margin: 2px;
+}
+
 .bannerWrapper {
   text-align: center;
   background-color: #000000;
