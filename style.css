@@ -44,6 +44,10 @@ code, .code {
   font-family: 'Ubuntu Mono', Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
+a:link, a:visited {
+  color: #b46bff
+}
+
 #scrollingBg {
   content: '';
   z-index: -1;
@@ -435,7 +439,9 @@ h2.pixel, h1.pixel {
   .scrollListWrapper {
     width: 25%;
   }
-
+  #iAm {
+    flex-basis: 20%;
+  }
 }
 
 .scrollList {
@@ -474,7 +480,7 @@ h2.pixel, h1.pixel {
   background-size: 1em 1em;
   vertical-align: middle;
 }
-.scrollList > li {
+.scrollList.withSub > li {
   font-weight: bolder;
 }
 

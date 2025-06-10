@@ -6,4 +6,5 @@
 
  this is my [Neocities](https://neocities.org/) website! i made this mainly because Neocities seems fun and i love old internet/web stuff, and it gives me a chance to learn more with HTML, CSS, and a little bit of JavaScript (i am much more familar with backend languages lol)
 
- do not expect this code to be pretty lol, there is a lot of commented out code and while i'm trying to avoid bad practices, there are probably some that i've missed
+ do not expect this code to be pretty lol, there is a lot of commented out code and while i'm trying to avoid bad practices, there are probably some that i've missed  
+ the styling is mostly for old aesthetic™ though and is mostly intentional lol
