@@ -479,8 +479,8 @@ h2.pixel, h1.pixel {
   /* background: rgba(0, 0, 0, 0.25); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45)); */
-  background: rgba(0, 0, 0, 0.80);
-  /* backdrop-filter: blur(5px); */
+  background: rgba(0, 0, 0, 0.90);
+  backdrop-filter: blur(5px);
   border: solid black 5px;
   border-style: solid none;
   text-align: center;
