@@ -53,7 +53,7 @@ body {
   height: 100%;
 }
 
-p, li, a {
+p, li, a, h1, h2 {
   font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
 }
 
