@@ -2,9 +2,26 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+.nf {
+  color: inherit;
+  font-family: 'NerdFontsSymbols Nerd Font' !important;
+}
+
 @font-face {
   font-family: nihonium;
   src: url(/fonts/nihonium113.ttf), local('MS UI Gothic');
+}
+
+/* @font-face {
+  font-family: AgaveNerdFontPropo;
+  src: url(/fonts/AgaveNerdFontPropo-Regular.ttf);
+} */
+
+@font-face {
+  font-family: AgaveRegular;
+  src: url(/fonts/Agave-Regular-slashed.ttf);
 }
 
 @keyframes bgScroll {
@@ -341,7 +358,14 @@ h2.pixel, h1.pixel {
 }
 
 #navBox * {
-  color: white;
+  /* color: white; */
+  font-size: 111%;
+  font-family: AgaveRegular;
+  display: inline-block;
+}
+
+#navBox .nf {
+  margin-inline: 0.15em;
 }
 
 /* yeah so the seperator is clickable ;w;
@@ -355,6 +379,10 @@ h2.pixel, h1.pixel {
   display: inline-block;
   pointer-events: none;
 } */
+
+.navSeperator {
+  margin: 0;
+}
 
 .inlineImg {
   display: inline-block;
