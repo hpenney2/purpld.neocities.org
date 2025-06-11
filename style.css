@@ -175,6 +175,24 @@ body {
   }
 }
 
+/* https://alvaromontoro.com/blog/68009/lgbtq-flags-coded-in-css 
+   aaaaand
+   https://www.geeksforgeeks.org/css/css-font-border/ */
+.pride {
+  background: linear-gradient(red 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
+  padding: 1em;
+  margin: 1em;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px 0px 0 #000,
+    3px 0px 0 #000,
+    0px -3px 0 #000,
+    0px 3px 0 #000;
+}
+
 h1 {
   text-align: center;
 }
