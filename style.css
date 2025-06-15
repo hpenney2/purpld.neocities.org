@@ -53,7 +53,7 @@ body {
   height: 100%;
 }
 
-p, li, a, h1, h2 {
+p, li, a, h1, h2, h3 {
   font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -160,6 +160,39 @@ body {
   to {
     max-width: 1200px;
   }
+} */
+
+#shrineContainer {
+  width: fit-content;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 10px;
+  /* background: rgba(0, 0, 0, 0.25); */
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45));
+  backdrop-filter: blur(5px);
+  border: solid black 5px;
+  /* min-height: 100vh; */
+}
+
+.shrineList {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: min-content;
+  margin: 1em auto;
+  gap: 5px;
+}
+
+.shrineList > * {
+  font-size: 0;
+}
+
+/* .shrineList > *:nth-last-child(1):nth-child(odd) {
+  grid-column: span all;
 } */
 
 #welcome {
@@ -308,6 +341,7 @@ h2.pixel, h1.pixel {
 .boldText {
   font-weight: bold;
   filter: drop-shadow(3px 3px gray);
+  margin-inline-end: 3px;
 }
 
 .centerContainer > div, .centerContainer > nav {
@@ -448,6 +482,27 @@ h2.pixel, h1.pixel {
   background-image: url("/img/player/stop_hover.png");
 }
 
+#musicButton > .musicTooltip {
+  position: relative;
+  /* z-index: -1; */
+  transition: max-width 3s linear, visibility 0s linear 3s;
+  overflow: hidden;
+  text-align: left;
+  background-color: #000;
+  max-width: 0;
+  right: calc(100% + 5px);
+  float: right;
+  padding: 2px;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#musicButton > .musicTooltip.expanded {
+  visibility: visible !important;
+  max-width: 500px !important;
+  transition: max-width 3s linear, visibility 0s linear 0s;
+}
+
 .button {
   image-rendering: pixelated;
   box-shadow: 2px 2px #aaa;
@@ -554,4 +609,15 @@ h2.pixel, h1.pixel {
 
 .scrollList li > ul > li {
   font-weight: initial;
+}
+
+.rainbow {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.nobr {
+  white-space: nowrap;
 }

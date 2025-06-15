@@ -5,7 +5,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preload" as="image" href="/img/checkerboard.png" />
-    <link rel="preload" as="font" href="fonts/nihonium113.ttf" />
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/nihonium113.ttf"
+      crossorigin="anonymous"
+    />
 
     <!-- yes, i know for production this really should be one bundled minified JS file but i don't really care for my silly personal website so :3
          for now, it's only one script -->
@@ -51,11 +56,13 @@
         </h1>
       </div>
 
-      <button
-        id="musicButton"
-        title="Play music"
-        onclick="toggleAudio()"
-      ></button>
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
 
       <!-- <p>Welcome!</p> -->
       <div id="welcome" class="center">
@@ -238,6 +245,11 @@
     </div>
 
     <footer class="footer center">
+      <img
+        src="https://c.tenor.com/Cb5m5L6kWyIAAAAC/tenor.gif"
+        alt='Gregg from Night in the Woods saying "got cups on my ears."'
+        style="max-height: 250px; margin: 1em"
+      />
       <div class="boldText">
         <code>:3</code> <br />
         <p>Author ~ <code>@purpld</code> / <code>@hpenney2</code></p>

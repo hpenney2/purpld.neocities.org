@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="preload" as="image" href="/img/checkerboard.png" />
 
+    <script src="/script/player.js"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
     <title>Shrines / Infodumps</title>
     <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
     <meta property="og:title" content="Shrines / Infodumps" />
@@ -21,20 +27,63 @@
     />
     <meta property="og:url" content="https://purpld.neocities.org/shrines" />
     <meta name="theme-color" content="#9900ff" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <div id="bgWrapper">
       <div id="scrollingBg"></div>
     </div>
 
-    <div id="container">
+    <div id="shrineContainer">
       <a href="/" class="code" style="float: left">Home</a>
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
       <h1 class="">SHRINES</h1>
-      <p><em>but nobody came...</em></p>
-      <p>sorry, nothing is here yet! please come back later :3</p>
-      <a href="//www.webkinz.com/"
-        ><img src="/img/buttons/webkinz.png" alt="Webkinz World badge"
-      /></a>
+      <p>
+        <em
+          >the doors to the nostalgia and hyperfixation vaults unlock...
+          slowly...</em
+        >
+      </p>
+      <p>
+        here are my shrines! these are esentially pages where i infodump about
+        some of my favorite things, whether they're nostalgic or just things i
+        really like
+      </p>
+      <div class="shrineList">
+        <a href="/shrines/webkinz"
+          ><img
+            src="/img/buttons/webkinz.png"
+            alt="Webkinz World"
+            title="Webkinz™: Come in and Play!"
+        /></a>
+      </div>
+      <h3 class="center">planned...</h3>
+      <div class="shrineList">
+        <img src="/img/animaljam/aj.png" alt="Animal Jam" title="Animal Jam" />
+        <img
+          src="/img/2picto.gif"
+          alt="I miss using PICTOCHAT"
+          title="Nintendo soon!"
+        />
+        <img src="/img/buttons/roblox.png" alt="ROBLOX" title="ROBLOX soon!" />
+        <img
+          src="/img/buttons/amazing_world.png"
+          alt="Amazing World"
+          title="Amazing World soon!"
+        />
+      </div>
     </div>
   </body>
 </html>

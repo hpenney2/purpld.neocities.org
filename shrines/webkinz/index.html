@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="webkinz.css" />
+    <link rel="preload" as="image" href="/img/checkerboard.png" />
+    <!-- <link
+      rel="shortcut icon"
+      href="/img/webkinz/favicon.ico"
+      type="image/x-icon"
+    /> -->
+    <link
+      rel="shortcut icon"
+      href="//www.webkinz.com/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <script src="/script/player.js"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <title>Webkinz&trade;: Come in and Play!</title>
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="Webkinz!" />
+    <meta
+      property="og:description"
+      content='"The Coolest Thing Is Everything!"'
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta property="og:url" content="https://purpld.neocities.org/shrines" />
+    <meta name="theme-color" content="#9900ff" />
+  </head>
+  <body>
+    <div id="kinzContainer">
+      <nav class="navCrumbs">
+        <ol>
+          <li class="navCrumb"><a href="/">Home</a></li>
+          <li class="navCrumb"><a href="/shrines">Shrines</a></li>
+          <li class="navCrumb">Webkinz</li>
+        </ol>
+      </nav>
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
+      <h1>
+        <img
+          class="center"
+          src="/img/webkinz/webkinz-logo.png"
+          alt='Webkinz logo, "Webkinz" "Come in and Play!"'
+          title="Webkinz™: Come in and Play!"
+        />
+      </h1>
+      <h2>Welcome to Webkinz&trade; World!</h2>
+      <p>
+        if you don't know, <span class="boldText">Webkinz</span> is a children's
+        massively multiplayer online (MMO) game and one the first in the
+        <a
+          href="//en.wikipedia.org/wiki/Toys-to-life"
+          target="_blank"
+          rel="noopener noreferrer"
+          >toys-to-life</a
+        >
+        genre of games.
+        <br />
+        the original core idea was that you buy a plushie at the store, and it
+        comes with a <span class="boldText">Secret Code</span> which you can use
+        to adopt your pet in the virtual game, in
+        <span class="boldText">Webkinz World</span> ! you keep your real and
+        virtual plushies, where you can play with them and take care of them in
+        the game.
+      </p>
+      <p>
+        there, you got to build a home with as many rooms as you want (though i
+        can't remember if its capped based on how many pets you have), feed and
+        dress up your pet, play job minigames at the Employment Office for
+        KinzCash, learn at the Kinzville Academy, mine for gems at the
+        <a
+          href="#"
+          onclick="new Audio('https://file.garden/aC0AvcHvgSVGyTqS/welcome_to_the_curio_shop').play(); return false;"
+          >Curio Shop</a
+        >, and most importantly, play games at the
+        <span class="boldText">Webkinz Arcade</span> ! (also for
+        ₩&nbsp;KinzCash, of course)
+        <br />
+        there is actually literally so much content that i can't fit it all into
+        this section lol
+      </p>
+      <h2>The Coolest Thing is Everything!</h2>
+      <p>
+        <span class="boldText">Webkinz</span> was an incredibly important part
+        of my childhood. i started playing it when i was very little and oh my
+        GOSH i was obsessed, and so was my family.
+      </p>
+      <p>
+        my first Webkinz was technically the Minty Moose, but the one I remember
+        the most and was most attached to was
+        <span class="rainbow boldText">Rainbow</span>, my Tie Dyed Puppy!
+        <img
+          src="/img/webkinz/rainbow.png"
+          alt="A screenshot of the modern Webkinz Classic game, showing a Tie Dyed Puppy named Rainbow. The heart meter is nearly full, the happiness meter is full, the food meter is slightly over half full, and the sleep meter is just under full."
+          style="float: right; max-width: 15em"
+        />
+      </p>
+      <p>
+        while i had many, many, <em>many</em> Webkinz, Rainbow has always been
+        my favorite pet and i love him and cherish him greatly. why? i dont know
+        lol, maybe just cause hes pretty, i always liked his design the most i
+        think &gt;p&lt;
+        <br />
+        but, i did everything with him for the most part!
+      </p>
+      <p>
+        i'm honestly kinda sad because all of my plushies are lost to time
+        <s>
+          (i.e. probably lost to rats in a storage unit which we never got them
+          out of because of
+          <span class="boldText">COMPLICATIONS</span>) </s
+        >, but when i did have them, i still held Rainbow as my favorite &lt;3
+        <br />
+        if you know where to look, you could find my own versions of "Webkinz
+        Hotel" videos on YouTube that i uploaded MANY years ago. (good luck,
+        they're unlisted lol) they have a bunch of my Webkinz plushies in them!
+      </p>
+      <p>
+        on that note, i did actually have a little bit of an obsession with
+        Webkinz videos n stuff for a while. my favorite creator was
+        <a href="//www.youtube.com/@TheSuperdog19" target="_blank"
+          >TheSuperdog19</a
+        >! he made skits and funny stuff!
+      </p>
+      <p>
+        there was, of course, also Webkinz's official music videos, Kinz Tunes,
+        which you could also watch and listen to in game. one of the one's i
+        remember the most for some reason is
+        <cite class="boldText">The Coolest Thing is Everything!</cite> which is
+        also the namesake of this section!
+      </p>
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 56.25%;
+        "
+      >
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/iLpyQTwiHoE?si=sTVSpZoHUaxF46a0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="position: absolute; width: 100%; height: 100%; top: 0; left: 0"
+        ></iframe>
+      </div>
+      <p>
+        (i also remember really liking
+        <cite class="boldText">I Like to Clown Around</cite>, it's still really
+        comforting to me hhhhhjjjshgj)
+      </p>
+      <p>here's some of my favorites!</p>
+      <div class="quikFlex">
+        <a
+          href="//www.youtube.com/watch?v=iLpyQTwiHoE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/img/webkinz/TheCoolestThingIsEverythingCover.png"
+            alt="Webkinz - The Coolest Thing is Everything"
+            style="max-height: 220px"
+          />
+        </a>
+        <a
+          href="//www.youtube.com/watch?v=P676J4fQnWo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/img/webkinz/ClownAroundCover.png"
+            alt="Webkinz&trade; Kinz Tunes - I Like to Clown Around"
+            style="max-height: 220px"
+          />
+        </a>
+        <a
+          href="//www.youtube.com/watch?v=VsBiFHyK1cI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/img/webkinz/GooglesCover.png"
+            alt="Webkinz&trade; Kinz Tunes - Go Go Go Googles"
+            style="max-height: 220px"
+          />
+        </a>
+      </div>
+      <h2>Come in and Play!</h2>
+      <p>
+        much to my surprise, i found out in 2019 that Webkinz is actually still
+        alive and to this day doing VERY well.
+      </p>
+      <ul>
+        <li>
+          <span class="boldText">Webkinz Next</span> is a new 3D version of the
+          game (think Club Penguin Island), it's okay lol but it's been
+          improving over the years honestly. they even brought the plushes back!
+          though they look like Beanie Babies/Boos. still though, some are
+          adorable like
+          <a
+            href="https://www.ganzestore.com/estore/catalog/plush/webkinzPlushFavorites921/teacup-yorkie"
+            target="_blank"
+            >look at the yorkie!!!!!</a
+          >
+        </li>
+        <li>
+          the original game, now "Webkinz Classic" still is very actively
+          updated with new pets and other content
+        </li>
+        <li>
+          all of the Kinz Tunes VERY recently
+          <a
+            href="//webkinznewz.ganzworld.com/announcements/stream-kinztunes-online/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            just got put on streaming services, and an "all-new song" is coming
+            soon!
+          </a>
+        </li>
+      </ul>
+      <p>
+        you can still like, go play the game!
+        <a
+          href="//www.webkinz.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: var(--yellow-highlight); font-weight: bold"
+          >you can go play Webkinz right now!</a
+        >
+        do that! it's honestly still super fun and i get so much nostalgia from
+        this awesome game. even better, it's free nowadays and you don't have
+        even have to buy a plushie.
+      </p>
+      <p>
+        so, yeah. i definitely see the game through a thick pair of nostalgia
+        goggles just because, but i do think Webkinz genuinely holds up and i
+        wish more kids today would experience the same feeling of logging in
+        everyday, taking care of your pets, having fun, and playing the Wacky
+        Log Out Carnival before you log out for now. it's nice knowing that the
+        era isn't lost like some others, though, like Club Penguin or Amazing
+        World.
+      </p>
+      <p>
+        Ganz in general has been a huge part of my childhood, so expect
+        something about Amazing World soon too!
+      </p>
+      <p>
+        i HIGHLY recommend watching
+        <a
+          href="https://www.youtube.com/watch?v=UUWfqo9vFxo"
+          target="_blank"
+          class="boldText"
+          >kkclue / planet clue's video on Webkinz and Webkinz Next</a
+        >
+        because it is <em>sooooo</em> good (i love clue's videos btw,
+        <a href="//planetclue.com/">check out his site</a> and his other
+        videos!)
+        <br />
+        it's a very good watch and a nostalgia trip, and it's actually an
+        awesome look at how Webkinz has been doing
+        <br />
+        (<a href="https://www.youtube.com/watch?v=iPP-v0OGbDc" target="_blank"
+          >go watch the sequel too!</a
+        >
+        dooooo it! you know you want to!)
+      </p>
+      <details class="pictureGallery">
+        <summary>more pictures, please!</summary>
+        <div>
+          <!-- <img src="/img/webkinz/rainbow.png" alt="" /> -->
+          <figure>
+            <img
+              src="/img/webkinz/rainbow_adoption_certificate.png"
+              alt="Certificate of Adoption: Congratulations [my real name] on your adoption of Rainbow, a girl Tie Dyed Puppy on 2011-04-30. We welcome another happy Webkinz into Webkinz World"
+            />
+            <figcaption>
+              my adoption certificate for Rainbow! "he" is actually a girl. i
+              remember picking the girl gender option during adoption, i think
+              to differenciate from all my others, but i think i literally just
+              forgot that i had done that quite quickly lol
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/img/webkinz/webkinz_room.png"
+              alt="a top down view of a Webkinz room layout"
+            />
+            <figcaption>
+              this is my house! i have intentionally avoided making edits for
+              some years lol
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/img/webkinz/webkinz_kinzville_map.png"
+              alt="the map of my personal Kinzville"
+            />
+            <figcaption>
+              here is my Kinzville Map! lots of frens here, and i miss Mazin'
+              Hamsters! (hint hint, future
+              <span class="boldText">Amazing World</span> shrine?)
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/img/webkinz/amazing_world_blooms_amazing_tree.png"
+              alt='an outdoor Webkinz room with a large pink and purple tree in the center of the room. the same tree is in the dock, labeled with a tooltip "Bloom&apos;s Amazing Tree"'
+            />
+            <figcaption>
+              actually more Amazing World content! this is Bloom's Amazing Tree
+              which you got from
+              <a
+                href="//webkinznewz.ganzworld.com/announcements/double-play/"
+                target="_blank"
+              >
+                linking your Webkinz and Amazing World accounts together</a
+              >. somehow i have 2?????
+            </figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+  </body>
+</html>

@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="preload" as="image" href="/img/checkerboard.png" />
     <link rel="preload" as="font" href="fonts/nihonium113.ttf" />
+
+    <script src="/script/player.js"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
   </head>
   <body>
     <div id="bgWrapper">
@@ -28,6 +34,14 @@
       />
       <div class="horizontalBoxy">
         <a href="/" class="code" style="float: left">Home</a>
+        <div>
+          <button id="musicButton" title="Play music" onclick="toggleAudio()">
+            <div class="musicTooltip">
+              <span class="code">NOW PLAYING</span>
+              <span id="musicTitle"></span>
+            </div>
+          </button>
+        </div>
         <p>
           hiya! im
           <span

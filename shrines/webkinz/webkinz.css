@@ -1,0 +1,140 @@
+/* this is based on http://web.archive.org/web/20110301233507/http://www2.webkinz.com/ !
+   some snippets are directly from there! but most emulate it */
+
+
+:root {
+  --webkinz-bg: #29A5FF;
+  --login-button: #C414F0;
+  --webkinz-purple: #8E00D0;
+  --yellow-highlight: #ffff00;
+}
+
+
+body {
+    margin: 0px;
+    padding: 5px 0px 10px 0px;
+    /* background-image: url(/web/20110223222827im_/http://www.webkinz.com/assets/images/bg_gradient.png); */
+    background-color: var(--webkinz-bg);
+    background-repeat: repeat-x;
+    background-position: 0px 51px;
+    text-align: center;
+    vertical-align: top;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#kinzContainer {
+  margin: 1em auto;
+  position: relative;
+  width: 1000px;
+  max-width: 90%;
+  padding: 10px;
+  /* min-height: 100vh; */
+  border: solid #0075BD 2px;
+  border-radius: 15px;
+  box-shadow: #0897F3 0 0 0 6px;
+}
+
+/* #kinzContainer:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 2px solid #0075BD;
+  border-radius: inherit;
+} */
+
+a:link, a:visited {
+  color: var(--webkinz-purple)
+}
+
+nav {
+  /* float: left; */
+  display: block;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav */
+.navCrumb {
+  display: inline-block;
+}
+
+.navCrumb a::after {
+  display: inline-block;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.navCrumbs ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  list-style-position: inside;
+  /* padding-left: 0; */
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.boldText {
+  color: var(--yellow-highlight);
+  /* filter: none; */
+}
+
+#musicButton > .musicTooltip {
+  background-color: #0897F3;
+}
+
+#kinzContainer  img {
+  vertical-align: middle;
+  margin: 1em;
+}
+
+details {
+  background-color: var(--login-button);
+  border: 2px solid #FDEF07;
+  padding: 1em;
+  /* border-radius: 0 0 15px 15px; */
+}
+
+.pictureGallery > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.pictureGallery > div > img, .pictureGallery > div > figure {
+  /* max-width: 25%; */
+  flex: 1 1 25%;
+  align-self: start;
+}
+
+.pictureGallery a, .pictureGallery a:visited {
+  color: unset;
+}
+
+figure > img {
+  max-width: 100%;
+}
+
+.pictureGallery img:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.quikFlex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* .quikFlex * {
+  height: 100%;
+} */
