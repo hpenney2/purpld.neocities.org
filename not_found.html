@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Not Found</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #gif404 {
+        max-height: 250px;
+        margin: 1em;
+      }
+    </style>
   </head>
   <body>
-    <h1>Page Not Found</h1>
-    <p>The requested page was not found.</p>
+    <h1 class="code">404 Page Not Found</h1>
+    <p>Oops!</p>
+    <!-- <p>THIS! IS! UNACCEPTABLE!</p> -->
+
+    <img id="gif404" />
+    <script>
+      let randoms = [
+        "https://media1.tenor.com/m/yqh5Gr92DVQAAAAC/bluey-muffin-coconuts-talking-to-stuffed-toy.gif",
+        "https://media1.tenor.com/m/gD9-VHIAjX0AAAAC/unacceptable-bluey.gif",
+        "https://media1.tenor.com/m/uFlA_NE5tWMAAAAC/legoshi-beastars.gif",
+        "https://media1.tenor.com/m/nEZKEKxcUjAAAAAC/tiger-shark.gif",
+        "https://media1.tenor.com/m/WHMXJDYMJXoAAAAC/lucario.gif",
+        "https://media1.tenor.com/m/IjM-iW1BkPYAAAAC/cutie-furry-meme.gif",
+        "https://media1.tenor.com/m/fMkIJWLeCeoAAAAC/pokemon-thunder-shock.gif",
+        "https://media.tenor.com/6xE2ntOWlt8AAAAi/ori.gif",
+      ];
+      const randomElement = randoms[Math.floor(Math.random() * randoms.length)];
+
+      document.getElementById("gif404").setAttribute("src", randomElement);
+    </script>
+
+    <noscript>
+      <p>
+        boo, you don't have JavaScript enabled so have Gregg i guess (normally
+        I'd give you a random GIF!)
+      </p>
+      <img
+        src="https://c.tenor.com/Cb5m5L6kWyIAAAAC/tenor.gif"
+        alt='Gregg from Night in the Woods saying "got cups on my ears."'
+        style="max-height: 250px; margin: 1em"
+      />
+    </noscript>
+
+    <p><a href="/" class="code">Home</a></p>
   </body>
 </html>
