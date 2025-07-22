@@ -56,55 +56,56 @@
       <div id="scrollingBg"></div>
     </div>
 
-    <div id="shrineContainer">
-      <a href="/" class="code" style="float: left">Home</a>
-      <div>
-        <button id="musicButton" title="Play music" onclick="toggleAudio()">
-          <div class="musicTooltip">
-            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
-          </div>
-        </button>
+    <div class="minFullscreenContainer">
+      <div id="shrineContainer">
+        <a href="/" class="code" style="float: left">Home</a>
+        <div>
+          <button id="musicButton" title="Play music" onclick="toggleAudio()">
+            <div class="musicTooltip">
+              <span class="code">NOW PLAYING</span>
+              <span id="musicTitle"></span>
+            </div>
+          </button>
+        </div>
+        <h1 id="defragTitle">defrag</h1>
+        <script>
+          let text = document.getElementById("defragTitle").innerText;
+          let newStr = "<span role='text'>";
+          for (let i = 0; i < text.length; i++) {
+            newStr += `<span style="font-size: ${
+              Math.random() * (2.5 - 1) + 1
+            }em">${text.charAt(i)}</span>`;
+          }
+          document.getElementById("defragTitle").innerHTML = newStr + "</span>";
+        </script>
+        <p style="text-align: right" role="text">
+          <strong>ID //</strong> <span id="idMsg">IDENTIFICATION FAILED</span>
+        </p>
+        <script>
+          let randoms = [
+            "IDENTIFICATION FAILED",
+            "WELCOME BACK",
+            "ADMIN UNAVAILABLE",
+            "UNKNOWN USER, PLEASE REGISTER",
+            "SYS READY",
+          ];
+          let randomElement =
+            randoms[Math.floor(Math.random() * randoms.length)];
+          document.getElementById("idMsg").innerText = randomElement;
+        </script>
+        <p>a personal page for personal things.</p>
+        <p style="text-align: right; font-size: xx-small">
+          yeah it's kinda just another blog. sorry?
+        </p>
+        <menu id="defragEntries">
+          <li>
+            <time datetime="2025-07-21"></time>
+            <a href="entries/2025-07-21.html"
+              >Something New // Welcome to the DEFRAG ZONE</a
+            >
+          </li>
+        </menu>
       </div>
-      <h1 id="defragTitle">defrag</h1>
-      <script>
-        let text = document.getElementById("defragTitle").innerText;
-        let newStr = "<span role='text'>";
-        for (let i = 0; i < text.length; i++) {
-          newStr += `<span style="font-size: ${
-            Math.random() * (2.5 - 1) + 1
-          }em">${text.charAt(i)}</span>`;
-        }
-        document.getElementById("defragTitle").innerHTML = newStr + "</span>";
-      </script>
-
-      <p style="text-align: right" role="text">
-        <strong>ID //</strong> <span id="idMsg">IDENTIFICATION FAILED</span>
-      </p>
-      <script>
-        let randoms = [
-          "IDENTIFICATION FAILED",
-          "WELCOME BACK",
-          "ADMIN UNAVAILABLE",
-          "UNKNOWN USER, PLEASE REGISTER",
-          "SYS READY",
-        ];
-
-        let randomElement = randoms[Math.floor(Math.random() * randoms.length)];
-        document.getElementById("idMsg").innerText = randomElement;
-      </script>
-
-      <p>a personal page for personal things.</p>
-      <p style="text-align: right; font-size: xx-small">
-        yeah it's kinda just another blog. sorry?
-      </p>
-      <menu id="defragEntries">
-        <li>
-          <time datetime="2025-07-21"></time>
-          <a href="entries/2025-07-21.html"
-            >Something New // Welcome to the DEFRAG ZONE</a
-          >
-        </li>
-      </menu>
     </div>
   </body>
 </html>
