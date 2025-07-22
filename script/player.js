@@ -18,6 +18,11 @@ switch (window.location.pathname) {
         title = "Animal Jam - Best Dressed (Preperation)"
         break;
 
+    case "/defrag/":
+        audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/friend_registration.mp3");
+        title = "Tomodachi Collection - Making a Friend"
+        break;
+
     default:
         audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/DVT%20-%20E-ditor%20kg.mp3");
         title = "??? (DVT - E-ditor)"
