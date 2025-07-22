@@ -57,7 +57,7 @@ p, li, a, h1, h2, h3 {
   font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code, .code {
+code, .code, #defragEntries time {
   font-family: 'Ubuntu Mono', Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
@@ -189,6 +189,23 @@ body {
 
 .shrineList > * {
   font-size: 0;
+}
+
+#defragEntries {
+  list-style: none;
+}
+
+#defragEntries * {
+  font-family: AgaveRegular;
+}
+
+#defragEntries time, #updates time {
+  font-size: 80%;
+  margin-inline: 0.5em;
+}
+
+#defragEntries time::after, time.copyTime::after {
+  content: attr(datetime);
 }
 
 /* .shrineList > *:nth-last-child(1):nth-child(odd) {
@@ -386,9 +403,11 @@ h2.pixel, h1.pixel {
   padding: 1em !important;
 }
 
+/* note to self, this doesn't actually work correctly! #navBox * overrides this, but I can't figure out how to get the styling to look correct or the same with actual flexboxy */
 #navBox > .innerBox {
   flex-flow: row wrap;
   gap: 1em;
+justify-content: center;
 }
 
 #navBox * {
@@ -398,8 +417,21 @@ h2.pixel, h1.pixel {
   display: inline-block;
 }
 
-#navBox .nf {
+#navBox > a {
+  font-weight: bold;
+}
+
+#navBox .nf,
+#navBox img {
   margin-inline: 0.15em;
+}
+
+#navBox img {
+  margin: 0;
+  margin-inline: 0.15em;
+  padding: 0;
+  display: inline-block;
+  height: 0.8em;
 }
 
 /* yeah so the seperator is clickable ;w;
@@ -621,3 +653,40 @@ h2.pixel, h1.pixel {
 .nobr {
   white-space: nowrap;
 }
+
+.defragContainer {
+  padding: 1em;
+}
+
+h1.defragTitle {
+  text-align: right;
+  /* padding-inline: 1em; */
+}
+
+.defragTime {
+  display: block;
+  /* padding-inline: 1em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em; */
+}
+
+.defragSubtitle {
+  font-style: italic;
+  /* padding-inline: 1em; */
+  text-align: right;
+  font-size: smaller;
+}
+
+/* #contentWarning {
+  background-color: black;
+  width: 100%;
+}
+
+#contentWarning::backdrop {
+  background-color: black;
+}
+
+.defragContent:has(#contentWarning[open]) {
+  content: "";
+} */
+

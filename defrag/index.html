@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the DEFRAG ZONE</title>
+
+    <link rel="shortcut icon" href="/img/defrag.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preload" as="image" href="/img/checkerboard.png" />
+
+    <script src="/script/player.js"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="THE DEFRAG ZONE" />
+    <meta property="og:description" content="defrag.exe" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta property="og:url" content="https://purpld.neocities.org/defrag" />
+    <meta name="theme-color" content="#9900ff" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #shrineContainer::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: url(/img/defrag/glass.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bgWrapper">
+      <div id="scrollingBg"></div>
+    </div>
+
+    <div id="shrineContainer">
+      <a href="/" class="code" style="float: left">Home</a>
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
+      <h1 id="defragTitle">defrag</h1>
+      <script>
+        let text = document.getElementById("defragTitle").innerText;
+        let newStr = "<span role='text'>";
+        for (let i = 0; i < text.length; i++) {
+          newStr += `<span style="font-size: ${
+            Math.random() * (2.5 - 1) + 1
+          }em">${text.charAt(i)}</span>`;
+        }
+        document.getElementById("defragTitle").innerHTML = newStr + "</span>";
+      </script>
+
+      <p style="text-align: right" role="text">
+        <strong>ID //</strong> <span id="idMsg">IDENTIFICATION FAILED</span>
+      </p>
+      <script>
+        let randoms = [
+          "IDENTIFICATION FAILED",
+          "WELCOME BACK",
+          "ADMIN UNAVAILABLE",
+          "UNKNOWN USER, PLEASE REGISTER",
+          "SYS READY",
+        ];
+
+        let randomElement = randoms[Math.floor(Math.random() * randoms.length)];
+        document.getElementById("idMsg").innerText = randomElement;
+      </script>
+
+      <p>a personal page for personal things.</p>
+      <p style="text-align: right; font-size: xx-small">
+        yeah it's kinda just another blog. sorry?
+      </p>
+      <menu id="defragEntries">
+        <li>
+          <time datetime="2025-07-21"></time>
+          <a href="entries/2025-07-21.html"
+            >Something New // Welcome to the DEFRAG ZONE</a
+          >
+        </li>
+      </menu>
+    </div>
+  </body>
+</html>
