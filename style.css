@@ -690,3 +690,27 @@ h1.defragTitle {
   content: "";
 } */
 
+#updates {
+  max-height: 35em;
+}
+
+#updates > .innerBox {
+  display: block;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 1em;
+  max-height: auto;
+}
+
+#updates > .innerBox > p {
+  padding: 0.5em 0;
+}
+
+.newUpdate > h3 {
+  font-size: x-large;
+}
+
+.newUpdate {
+  background-image: linear-gradient(0deg, #181818, #b46bff);
+  padding: 1em;
+}
