@@ -55,5 +55,6 @@ module.exports = function (eleventyConfig) {
       input: "content",
       output: "public",
     },
+    htmlTemplateEngine: "njk"
   };
 };

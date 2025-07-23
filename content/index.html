@@ -242,6 +242,24 @@
             </div>
           </div>
         </div>
+        <div id="defragPreview" style="flex-basis: 100%; height: min-content">
+          <h2 class="pixel center">latest from THE DEFRAG ZONE</h2>
+          <div class="innerBox">
+            <div id="defragEntries" style="text-align: right">
+              <time
+                class="copyTime"
+                datetime="{{ collections.defragPosts[0].data.date | date }}"
+              ></time>
+              <a href="{{ collections.defragPosts[0].url }}"
+                >{{ collections.defragPosts[0].data.title }}</a
+              >
+              <p class="defragSubtitle" style="margin: 0.2em 0">
+                {{ collections.defragPosts[0].data.subtitle }}
+              </p>
+            </div>
+            <img src="/img/defrag_256.png" alt="" style="height: 5em" />
+          </div>
+        </div>
         <div id="coolPeople" style="flex-basis: 100%; height: min-content">
           <h2 class="pixel center">cool peoplez!</h2>
           <marquee

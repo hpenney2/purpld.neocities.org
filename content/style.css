@@ -726,3 +726,9 @@ h1.defragTitle {
   background-image: linear-gradient(0deg, #181818, #b46bff);
   padding: 1em;
 }
+
+#defragPreview > .innerBox {
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
