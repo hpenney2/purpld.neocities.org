@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/img/defrag.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/style.css{{ nocache }}" />
+    <link rel="preload" as="image" href="/img/checkerboard.png" />
+
+    <script src="/script/player.js{{ nocache }}"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <title>{{ title }} ({{ date | date }})</title>
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ subtitle }}" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="{{ date | date }}" />
+    {% if updated %}
+    <meta property="article:modified_time" content="{{ updated | date }}" />
+    {% endif %}
+    <meta property="article:section" content="DEFRAG ZONE" />
+
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta
+      property="og:url"
+      content="https://purpld.neocities.org{{ page.url }}"
+    />
+    <meta name="theme-color" content="#9900ff" />
+  </head>
+  <body>
+    <div id="bgWrapper">
+      <div id="scrollingBg"></div>
+    </div>
+
+    <div id="container">
+      <nav>
+        <a href="/" class="code">Home</a> /
+        <a href="/defrag" class="code">DEFRAG ZONE</a>
+      </nav>
+
+      <article class="defragContainer">
+        <time class="code defragTime" datetime="{{ date | date }}">{{
+          date | date("LLLL dd, yyyy")
+        }}</time>
+        <h1 class="pixel defragTitle">
+          {{ title }}
+        </h1>
+        <p class="defragSubtitle">{{ subtitle }}</p>
+
+        <div class="defragContent">
+          {{ content | safe }}
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

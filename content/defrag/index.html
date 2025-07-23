@@ -98,12 +98,12 @@
           yeah it's kinda just another blog. sorry?
         </p>
         <menu id="defragEntries">
+          {% for post in collections.defragPosts %}
           <li>
-            <time datetime="2025-07-21"></time>
-            <a href="entries/2025-07-21.html"
-              >Something New // Welcome to the DEFRAG ZONE</a
-            >
+            <time datetime="{{ post.data.date | date }}"></time>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
           </li>
+          {% endfor %}
         </menu>
       </div>
     </div>
