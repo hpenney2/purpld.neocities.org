@@ -51,6 +51,14 @@
         <time class="code defragTime" datetime="{{ date | date }}">{{
           date | date("LLLL dd, yyyy")
         }}</time>
+        {% if updated %}
+        <time
+          class="code defragTime defragTimeUpdated"
+          datetime="{{ date | date }}"
+          >updated {{ updated | date("LLLL dd, yyyy") }}
+        </time>
+        {% endif %}
+
         <h1 class="pixel defragTitle">
           {{ title }}
         </h1>

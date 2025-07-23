@@ -677,6 +677,11 @@ h1.defragTitle {
   margin-bottom: 0.67em; */
 }
 
+.defragTimeUpdated {
+  font-size: smaller;
+  margin-top: 0.1em;
+}
+
 .defragSubtitle {
   font-style: italic;
   /* padding-inline: 1em; */
