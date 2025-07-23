@@ -5,5 +5,5 @@ set -e
 # git stash push --all
 pnpm run build
 
-neocities push ./content
+neocities push ./public
 # git stash pop
