@@ -703,7 +703,7 @@ h1.defragTitle {
 
 #updates > .innerBox {
   display: block;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 100%;
   padding: 1em;
   max-height: auto;

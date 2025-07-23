@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-git stash push --include-untracked
-neocities push -e README.md -e static/ -e push.sh .
-git stash pop
+rm -rf public
+
+# git stash push --all
+pnpm run build
+
+neocities push ./content
+# git stash pop
