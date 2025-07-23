@@ -3,7 +3,7 @@
   <head>
     <title>~ PURPLD'S WORLD ~</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css{{ nocache }}" />
     <link rel="preload" as="image" href="/img/checkerboard.png" />
     <link
       rel="preload"
@@ -11,10 +11,16 @@
       href="fonts/nihonium113.ttf"
       crossorigin="anonymous"
     />
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/Agave-Regular-slashed.ttf"
+      crossorigin="anonymous"
+    />
 
     <!-- yes, i know for production this really should be one bundled minified JS file but i don't really care for my silly personal website so :3
          for now, it's only one script -->
-    <script src="/script/player.js"></script>
+    <script src="/script/player.js{{ nocache }}"></script>
     <link rel="prefetch" as="image" href="/img/player/play.png" />
     <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
     <link rel="prefetch" as="image" href="/img/player/stop.png" />

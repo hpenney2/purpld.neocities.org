@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf public",
     "build": "pnpm dlx @11ty/eleventy"
   },
   "packageManager": "pnpm@10.13.1",

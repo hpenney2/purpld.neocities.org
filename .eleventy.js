@@ -15,8 +15,13 @@ module.exports = function (eleventyConfig) {
 
 //   eleventyConfig.addPassthroughCopy("content/favicon.ico");
 
-    // Passthrough EVERYTHING in the content folder. We're trusting that it's been sorted correctly.
-    eleventyConfig.addPassthroughCopy("content/**/*.*");
+  eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "png", "gif", "jpg", "jpeg", "ttf", "ico"]);
+
+  eleventyConfig.addPassthroughCopy("content/favicon.*");
+//   eleventyConfig.addPassthroughCopy("content/**/*.*", {
+//     mode: "html-relative",
+//     failOnError: false,
+//   });
 
 
   return {

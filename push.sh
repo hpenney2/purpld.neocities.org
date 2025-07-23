@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-rm -rf public
 
 # git stash push --all
 pnpm run build
