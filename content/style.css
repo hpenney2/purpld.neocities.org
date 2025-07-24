@@ -732,3 +732,7 @@ h1.defragTitle {
   align-items: center;
   gap: 1em;
 }
+
+.rss {
+  height: 1em;
+}

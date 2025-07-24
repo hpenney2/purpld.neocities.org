@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "png", "gif", "jpg", "jpeg", "ttf", "ico"]);
 
-  eleventyConfig.addPassthroughCopy("content/favicon.*");
+  // eleventyConfig.addPassthroughCopy("content/favicon.*");
 //   eleventyConfig.addPassthroughCopy("content/**/*.*", {
 //     mode: "html-relative",
 //     failOnError: false,
@@ -48,6 +48,11 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/defrag/entries/*.{html,md}").sort((a, b) => {
       return b.date - a.date; // Sort in reverse chronological order (newest first)
     });
+  });
+
+  // Add date filter for RSS
+  eleventyConfig.addFilter("dateToRfc822", function(date) {
+    return new Date(date).toUTCString();
   });
 
   return {

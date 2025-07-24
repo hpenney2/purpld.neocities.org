@@ -27,6 +27,8 @@
     <meta property="og:url" content="https://purpld.neocities.org/defrag" />
     <meta name="theme-color" content="#9900ff" />
 
+    {% include "defrag_feed.njk" %}
+
     <style>
       body {
         margin: 0;
@@ -97,6 +99,9 @@
         <p style="text-align: right; font-size: xx-small">
           yeah it's kinda just another blog. sorry?
         </p>
+        <a href="feed.xml" style="float: left"
+          ><img class="rss" src="/img/RSS_Logo.png" alt=""
+        /></a>
         <menu id="defragEntries">
           {% for post in collections.defragPosts %}
           <li>
