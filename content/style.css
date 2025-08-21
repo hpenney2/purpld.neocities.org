@@ -741,3 +741,26 @@ h1.defragTitle {
   align-items: center;
   gap: 1em;
 }
+
+.toneTag {
+  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+  color: #AAA;
+  text-underline-offset: -1px;
+  /* padding-inline-start: 0.25em;
+  padding-inline-end: 0.25em; */
+}
+
+.spellError {
+  text-decoration: underline wavy red;
+  -webkit-text-decoration: underline wavy red;
+}
+
+.spellWarn {
+  text-decoration: underline wavy yellow;
+  -webkit-text-decoration: underline wavy yellow;
+}
+
+.quiet {
+  color: #AAA;
+}
