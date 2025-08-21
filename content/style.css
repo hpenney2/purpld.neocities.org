@@ -200,6 +200,11 @@ body {
 
 #defragEntries {
   list-style: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* backdrop-filter: blur(5px); */
+  /* border-radius: 20px 0px; */
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 #defragEntries * {
@@ -211,8 +216,12 @@ body {
   margin-inline: 0.5em;
 }
 
-#defragEntries time::after, time.copyTime::after {
+#defragEntries time::before, time.copyTime::before {
   content: attr(datetime);
+}
+
+#defragEntries > li {
+  padding-block-end: 0.25em
 }
 
 /* .shrineList > *:nth-last-child(1):nth-child(odd) {
