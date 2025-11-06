@@ -403,6 +403,64 @@ h2.pixel, h1.pixel {
   gap: 1em;
 }
 
+.lyricsMarquee {
+  max-width: 20em;
+  align-self: center;
+
+  /* border: #222 solid 2px; */
+  background: rgba(0, 0, 0, 0.70);
+  padding: 0.5em;
+}
+
+.lyricsMarquee > p {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding-inline: 1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-weight: bold;
+
+  animation: lyricBounce 5s ease-in-out infinite;
+}
+
+.lyricsMarquee > p::before, .lyricsMarquee > p::after {
+  content: url("/img/blue-cyan_musicnote.gif");
+  display: inline-block;
+  height: auto;
+  /* position: relative;
+  bottom: -4px; */
+  vertical-align: middle;
+}
+
+.lyricsMarquee > p::before {
+  margin-right: 5px;
+}
+
+.lyricsMarquee > p::after {
+  margin-left: 5px;
+}
+
+@supports (animation-delay: calc(sibling-index() * 1s)) {
+  .lyricsMarquee > p {
+    animation-delay: calc((sibling-index() - 1) * 1s);
+  }
+}
+
+@keyframes lyricBounce {
+  0% {
+    bottom: 5px;
+  }
+  50% {
+    bottom: -5px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+
+
 /* unused for now... but could be a cool effect somewhere! */
 .blanket {
   box-shadow: white 0px 0px 0px 0.5em, rgba(255, 255, 255, 0.5) 0px 0px 0px 0.75em, rgba(255, 255, 255, 0.25) 0px 0px 0px 1em;
