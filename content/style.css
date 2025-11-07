@@ -866,6 +866,41 @@ h2.pixel, h1.pixel {
   transform: scale(1.2);
 }
 
+/* https://stackoverflow.com/a/52565852 */
+.slashed {
+  position: relative;
+  /* background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); */
+}
+
+.slashed::before, .slashed::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    border-image: linear-gradient(30deg, #000, red, #000) 2;
+}
+
+/* .slashed::before {
+    border-bottom: 5px solid;
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+} */
+
+.slashed::after {
+    border-bottom: 5px solid;
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+}
+
+.slashed img {
+  filter: grayscale(95%);
+  z-index: -1;
+}
+
+.slashed .button:hover {
+  transform: unset;
+}
 
 /* About Page */
 #aboutWrapper {
