@@ -614,6 +614,7 @@ h2.pixel, h1.pixel {
     margin: 1em 2em;
   }
 
+  /* this is mildy stolen from https://ne0nbandit.art/home so thanks mate sorry lol */
   .nikkiWrapper:after {
     content: "";
     position: absolute;
