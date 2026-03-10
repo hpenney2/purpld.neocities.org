@@ -3,7 +3,8 @@ set -e
 
 
 # git stash push --all
+git stash push --include-untracked
 pnpm run build
 
 neocities push ./public
-# git stash pop
+git stash pop
