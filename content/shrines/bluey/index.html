@@ -1,0 +1,316 @@
+{% macro audio(url) %}
+<a
+  href="#"
+  onclick="new Audio('{{ url | escape }}').play(); return false;"
+  aria-label="Play voice clip"
+  ><i class="nf nf-fa-play"></i
+></a>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/style.css{{ nocache }}" />
+    <link rel="stylesheet" href="bluey.css" />
+    <!-- <link
+      rel="shortcut icon"
+      href="/img/webkinz/favicon.ico"
+      type="image/x-icon"
+    /> -->
+    <link
+      rel="shortcut icon"
+      href="//www.bluey.tv/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <script src="/script/player.js{{ nocache }}"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <title>Bluey! ~ PURPLD'S WORLD</title>
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="Bluey!" />
+    <meta
+      property="og:description"
+      content="&quot;Wait, isn't that a kid's show?&quot;"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta property="og:url" content="https://purpld.neocities.org/bluey" />
+    <meta name="theme-color" content="var(--cl__body-copy)" />
+  </head>
+  <body>
+    <nav class="navCrumbs">
+      <ol>
+        <li class="navCrumb"><a href="/">Home</a></li>
+        <li class="navCrumb"><a href="/shrines">Shrines</a></li>
+        <li class="navCrumb"><strong>Bluey</strong></li>
+      </ol>
+    </nav>
+    <div id="blueyContainer">
+      <div class="blueyBanner">
+        <h1 style="margin: 0; font-size: unset">
+          <img
+            class="banner"
+            src="/img/bluey/bluey_transparent.png"
+            alt="BLUEY"
+          />
+        </h1>
+      </div>
+
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
+
+      <h2><em>"Wait, isn't that a kid's show?"</em></h2>
+      <p><strong>Yep!</strong></p>
+      <p>
+        <span class="boldText">Bluey</span> is an Australian children's TV
+        program.
+        <br />
+        you know what Bluey is. even if you know little to nothing about it,
+        it's basically impossible to avoid lol
+      </p>
+      <p>
+        despite being a TV show aimed at children, it has insane popularity with
+        not-children too, and I am one of those as it turns out!
+      </p>
+      <p>
+        and by that i mean i'm obsessed. <small><em>biscuits.</em></small>
+      </p>
+
+      <h2>
+        <q cite="https://www.bluey.tv/characters/muffin/"
+          >COCONUTS HAVE WATER IN THEM!</q
+        >
+        <a
+          href="#"
+          onclick="new Audio('https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3').play(); return false;"
+          aria-label="Play voice clip"
+          ><i class="nf nf-fa-play"></i
+        ></a>
+      </h2>
+      <p>
+        yeah uh, i kinda became hyperfixated on this show starting in July
+        (2025). i randomly decided to try it on Disney+ and got into it pretty
+        quickly
+      </p>
+      <p>things of note!</p>
+      <ul>
+        <li>
+          this show is extremely cute! i love bluey, bingo, and the whole family
+          and i wish everyone could have that growing up. their family dynamic
+          and play is lovely
+        </li>
+        <li>
+          i love the lessons that bluey gives! some things are just good
+          reminders, and some things are definitely even aimed at the adults and
+          parents too. there's things for us all to learn! (or relearn, too!) {#
+          <ul>
+            <li>
+              ...like how for some reason, adults take (often unnecessarily in
+              my opinion!) longer to make friends. (<cite
+                ><a href="https://www.bluey.tv/watch/season-2/cafe/"
+                  >Cafe</a
+                ></cite
+              >)
+            </li>
+          </ul>
+          #}
+        </li>
+        <li>
+          oh my GOSH the sneaky tears. some episodes will just suddenly make you
+          wanna cry really bad, even if you're not a parent or anything. and if
+          you are gonna watch Bluey, <strong>try to avoid spoilers</strong> in
+          my opinion.
+          <br />
+          yes, i'm serious, avoid spoilers for this show for preschoolers.
+          <br />
+          just trust me on this one.
+        </li>
+      </ul>
+
+      <h2>
+        <q cite="https://www.bluey.tv/watch/season-3/unicorse/"
+          >UH AH! <em>DON'T</em> spoil the ending!</q
+        >
+        <a
+          href="#"
+          onclick="new Audio('https://file.garden/aC0AvcHvgSVGyTqS/Bluey/DONT_spoil_the_ending!.mp3').play(); return false;"
+          aria-label="Play voice clip"
+          ><i class="nf nf-fa-play"></i
+        ></a>
+      </h2>
+      <p style="text-align: center">
+        <strong style="font-size: x-large">HEY!</strong> This section has
+        <strong>spoilers</strong>. Open the sections at your own risk!
+      </p>
+      <p>here I talk about some of my favorite episodes!</p>
+
+      <h2>favorite quotes</h2>
+      <p>
+        admittedly i already used some of these for titles here lol
+        <br />
+        but still, here's an (assorted) list of some of my favorite quotes from
+        the show, whether they're funny or really impactful.
+      </p>
+      <ul class="quoteList">
+        <li>
+          <blockquote>
+            "You kids just go about it, don't you?... Just go about it."
+          </blockquote>
+          &mdash; Chilli in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-3/relax/"
+              >Relax (S3 E42)</a
+            ></cite
+          >
+        </li>
+        <li>
+          <blockquote>
+            "I don't want a valuable lime lesson! I just want an ice cream..."
+            {{
+            audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep46-Ice-Cream_QUOTE_Bluey_Lime-Lesson.mp3")
+            }}
+          </blockquote>
+          &mdash; Bluey in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-2/ice-cream/"
+              >Ice Cream (S2 E46)</a
+            ></cite
+          >
+          <p class="subText">me, basically daily</p>
+        </li>
+        <li>
+          <blockquote>
+            "COCONUTS HAVE WATER IN THEM!" {{
+            audio('https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3')
+            }}
+          </blockquote>
+          &mdash; Muffin in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-1/the-sleepover/"
+              >The Sleepover (S1 E40)</a
+            ></cite
+          >
+        </li>
+        <li>
+          <blockquote>
+            "Remember I'll always be here for you, even if you can't see me…
+            because I love you." {{
+            audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep26-Sleepytime_QUOTE_Chilli_I-Love-You.mp3")
+            }}
+          </blockquote>
+          &mdash; Chilli in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-2/sleepytime/"
+              >Sleepytime (S2 E26)</a
+            ></cite
+          >
+          <p class="subText">
+            Sleepytime had an impact on me that I can't quite put into words.
+            <br />A good mum.
+          </p>
+        </li>
+        <li>
+          <blockquote>
+            "Bingo, sometimes does your outside voice say 'yes' when your inside
+            voice really means 'no'?"
+          </blockquote>
+          &mdash; Chilli in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-2/dance-mode/"
+              >Dance Mode (S2 E1)</a
+            ></cite
+          >
+          <p class="subText">
+            i'm a bit of a people pleaser so...
+            <br />
+            yeah. felt that one.
+          </p>
+        </li>
+        <li>
+          <blockquote>
+            "Mum, how do animals with no tails know when they're happy?"
+          </blockquote>
+          &mdash; Bingo in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-2/duck-cake/"
+              >Duck Cake (S2 E43)</a
+            ></cite
+          >
+        </li>
+        <li>
+          <blockquote>"hehehe, <em>bottomless</em>."</blockquote>
+          &mdash; Bingo in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-1/the-claw/"
+              >The Claw (S1 E19)</a
+            ></cite
+          >
+        </li>
+        <li>
+          <blockquote>
+            Indy ~ "My mum always says, 'what goes around, comes around!'"
+            <br />
+            Bluey ~ <em>tearing up</em> "What does that mean?"
+          </blockquote>
+          &mdash; Indy and Bluey in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-1/markets/"
+              >Markets (S1 E20)</a
+            ></cite
+          >
+        </li>
+        <li>
+          <blockquote>
+            "It's just the driving around in circles. I think I'm better when
+            I've got a purpose, like doing things for people, you know?"
+          </blockquote>
+          &mdash; Chilli in
+          <cite
+            ><a href="https://www.bluey.tv/watch/season-3/driving/"
+              >Driving (S3 E20)</a
+            ></cite
+          >
+        </li>
+      </ul>
+
+      <h2>
+        <q>...<em>gasp</em>, zeeeroooo!</q>
+        <a
+          href="#"
+          onclick="new Audio('https://file.garden/aC0AvcHvgSVGyTqS/Bluey/zero.mp3').play(); return false;"
+          aria-label="Play voice clip"
+          ><i class="nf nf-fa-play"></i
+        ></a>
+      </h2>
+      <p>
+        honestly, i can't put enough into this page to show how much i love this
+        show. it is actually the best and i don't know how to word everything i
+        feel about it &gt;p&lt;
+      </p>
+    </div>
+    <footer>
+      <p>
+        BLUEY&trade; and character logo&trade; are trademarks of Ludo Studio.
+      </p>
+      <p>
+        This website is not affiliated with Ludo Studio or the British
+        Broadcasting Corporation.
+      </p>
+    </footer>
+  </body>
+</html>
