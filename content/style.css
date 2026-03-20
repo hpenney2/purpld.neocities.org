@@ -6,12 +6,12 @@
 
 .nf {
   color: inherit;
-  font-family: 'NerdFontsSymbols Nerd Font' !important;
+  font-family: "NerdFontsSymbols Nerd Font" !important;
 }
 
 @font-face {
   font-family: nihonium;
-  src: url(/fonts/nihonium113.ttf), local('MS UI Gothic');
+  src: url(/fonts/nihonium113.ttf), local("MS UI Gothic");
 }
 
 /* @font-face {
@@ -53,20 +53,43 @@ body {
   height: 100%;
 }
 
-p, li, a, h1, h2, h3 {
-  font-family: 'Segoe UI', SegoeUI, Noto Sans, Tahoma, Geneva, Verdana, sans-serif;
+p,
+li,
+a,
+h1,
+h2,
+h3 {
+  font-family:
+    "Segoe UI",
+    SegoeUI,
+    Noto Sans,
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
 }
 
-code, .code, #defragEntries time {
-  font-family: 'Ubuntu Mono', Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+code,
+.code,
+#defragEntries time {
+  font-family:
+    "Ubuntu Mono",
+    Consolas,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New;
 }
 
-a:link, a:visited {
-  color: #b46bff
+a:link,
+a:visited {
+  color: #b46bff;
 }
 
 #scrollingBg {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   left: 0;
@@ -115,14 +138,14 @@ body {
 
 @keyframes gradient {
   0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #container {
@@ -133,7 +156,12 @@ body {
   padding: 10px;
   /* background: rgba(0, 0, 0, 0.25); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 10%,
+    30%,
+    rgba(0, 0, 0, 0.45)
+  );
   backdrop-filter: blur(5px);
   border: solid black 5px;
   min-height: 100vh;
@@ -179,7 +207,12 @@ body {
   padding: 10px;
   /* background: rgba(0, 0, 0, 0.25); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 10%,
+    30%,
+    rgba(0, 0, 0, 0.45)
+  );
   backdrop-filter: blur(5px);
   border: solid black 5px;
   /* min-height: 100vh; */
@@ -211,17 +244,19 @@ body {
   font-family: AgaveRegular;
 }
 
-#defragEntries time, #updates time {
+#defragEntries time,
+#updates time {
   font-size: 80%;
   margin-inline: 0.5em;
 }
 
-#defragEntries time::before, time.copyTime::before {
+#defragEntries time::before,
+time.copyTime::before {
   content: attr(datetime);
 }
 
 #defragEntries > li {
-  padding-block-end: 0.25em
+  padding-block-end: 0.25em;
 }
 
 /* .shrineList > *:nth-last-child(1):nth-child(odd) {
@@ -230,7 +265,9 @@ body {
 
 #welcome {
   position: relative;
-  animation: floaty 3s ease-in-out infinite, rainbow 20s linear infinite;
+  animation:
+    floaty 3s ease-in-out infinite,
+    rainbow 20s linear infinite;
 }
 
 .floaty {
@@ -251,7 +288,7 @@ body {
 
 @keyframes rainbow {
   from {
-    filter: hue-rotate(0deg)
+    filter: hue-rotate(0deg);
   }
   to {
     filter: hue-rotate(360deg);
@@ -262,7 +299,14 @@ body {
    aaaaand
    https://www.geeksforgeeks.org/css/css-font-border/ */
 .pride {
-  background: linear-gradient(red 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
+  background: linear-gradient(
+    red 16.66%,
+    orange 0 33.33%,
+    yellow 0 50%,
+    green 0 66.66%,
+    blue 0 83.33%,
+    indigo 0
+  );
   padding: 1em;
   margin: 1em;
   text-shadow:
@@ -295,7 +339,8 @@ h1 {
   text-rendering: geometricPrecision;
 }
 
-h2.pixel, h1.pixel {
+h2.pixel,
+h1.pixel {
   font-weight: normal;
   font-size: xx-large;
 }
@@ -545,8 +590,9 @@ h2.pixel, h1.pixel {
   margin-inline-end: 3px;
 }
 
-.centerContainer > div, .centerContainer > nav {
-  background: rgba(0, 0, 0, 0.70);
+.centerContainer > div,
+.centerContainer > nav {
+  background: rgba(0, 0, 0, 0.7);
   border: 0.3em solid #000000;
   border-radius: 10px;
   padding: 2em;
@@ -567,7 +613,7 @@ h2.pixel, h1.pixel {
 }
 
 .statusProfilePic {
-  height: 10em; 
+  height: 10em;
   max-width: 10em;
   display: inline-block;
   animation: smolRotate 10s ease-in-out infinite;
@@ -579,7 +625,8 @@ h2.pixel, h1.pixel {
 }
 
 @keyframes smolRotate {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(-5deg);
   }
 
@@ -589,7 +636,7 @@ h2.pixel, h1.pixel {
 }
 
 .theGuySaysStuff {
-    /* width: fit-content; */
+  /* width: fit-content; */
   margin: auto;
   display: flex;
   flex-flow: column wrap;
@@ -603,7 +650,6 @@ h2.pixel, h1.pixel {
   position: relative;
   margin: 1em 0;
 }
-
 
 @media screen and (min-width: 800px) {
   .theGuySaysStuff {
@@ -656,7 +702,7 @@ h2.pixel, h1.pixel {
   align-self: center;
 
   /* border: #222 solid 2px; */
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.7);
   padding: 0.5em;
 }
 
@@ -673,7 +719,8 @@ h2.pixel, h1.pixel {
   animation: lyricBounce 5s ease-in-out infinite;
 }
 
-.lyricsMarquee > p::before, .lyricsMarquee > p::after {
+.lyricsMarquee > p::before,
+.lyricsMarquee > p::after {
   content: url("/img/blue-cyan_musicnote.gif");
   display: inline-block;
   height: auto;
@@ -708,10 +755,12 @@ h2.pixel, h1.pixel {
   }
 }
 
-
 /* unused for now... but could be a cool effect somewhere! */
 .blanket {
-  box-shadow: white 0px 0px 0px 0.5em, rgba(255, 255, 255, 0.5) 0px 0px 0px 0.75em, rgba(255, 255, 255, 0.25) 0px 0px 0px 1em;
+  box-shadow:
+    white 0px 0px 0px 0.5em,
+    rgba(255, 255, 255, 0.5) 0px 0px 0px 0.75em,
+    rgba(255, 255, 255, 0.25) 0px 0px 0px 1em;
 }
 
 #intro {
@@ -799,7 +848,6 @@ h2.pixel, h1.pixel {
   text-align: left;
 }
 
-
 #creditsList > li:nth-child(even) {
   text-align: right;
 }
@@ -839,7 +887,9 @@ h2.pixel, h1.pixel {
 #musicButton > .musicTooltip {
   position: relative;
   /* z-index: -1; */
-  transition: max-width 3s linear, visibility 0s linear 3s;
+  transition:
+    max-width 3s linear,
+    visibility 0s linear 3s;
   overflow: hidden;
   text-align: left;
   background-color: #000;
@@ -859,7 +909,9 @@ h2.pixel, h1.pixel {
 #musicButton > .musicTooltip.expanded {
   visibility: visible !important;
   max-width: 500px !important;
-  transition: max-width 3s linear, visibility 0s linear 0s;
+  transition:
+    max-width 3s linear,
+    visibility 0s linear 0s;
 }
 
 .button {
@@ -878,13 +930,14 @@ h2.pixel, h1.pixel {
   /* background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); */
 }
 
-.slashed::before, .slashed::after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 40%;
-    border-image: linear-gradient(30deg, #000, red, #000) 2;
+.slashed::before,
+.slashed::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  border-image: linear-gradient(30deg, #000, red, #000) 2;
 }
 
 /* .slashed::before {
@@ -894,9 +947,9 @@ h2.pixel, h1.pixel {
 } */
 
 .slashed::after {
-    border-bottom: 5px solid;
-    -webkit-transform: skewY(-15deg);
-    transform: skewY(-15deg);
+  border-bottom: 5px solid;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
 }
 
 .slashed img {
@@ -928,7 +981,7 @@ h2.pixel, h1.pixel {
   /* background: rgba(0, 0, 0, 0.25); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.25)); */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, 30%, rgba(0, 0, 0, 0.45)); */
-  background: rgba(0, 0, 0, 0.90);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(5px);
   border: solid black 5px;
   border-style: solid none;
@@ -1020,7 +1073,16 @@ h2.pixel, h1.pixel {
 }
 
 .rainbow {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent !important;
@@ -1105,7 +1167,7 @@ h1.defragTitle {
 .toneTag {
   text-decoration: underline dotted;
   -webkit-text-decoration: underline dotted;
-  color: #AAA;
+  color: #aaa;
   text-underline-offset: -1px;
   /* padding-inline-start: 0.25em;
   padding-inline-end: 0.25em; */
@@ -1122,5 +1184,5 @@ h1.defragTitle {
 }
 
 .quiet {
-  color: #AAA;
+  color: #aaa;
 }
