@@ -7,7 +7,7 @@
 ></a>
 {% endmacro %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -77,8 +77,7 @@
       <h2><em>"Wait, isn't that a kid's show?"</em></h2>
       <p><strong>Yep!</strong></p>
       <p>
-        <span class="boldText">Bluey</span> is an Australian children's TV
-        program.
+        <span class="bluey">Bluey</span> is an Australian children's TV program.
         <br />
         you know what Bluey is. even if you know little to nothing about it,
         it's basically impossible to avoid lol
@@ -97,7 +96,12 @@
         >
         <a
           href="#"
-          onclick="new Audio('https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3').play(); return false;"
+          onclick="
+            new Audio(
+              'https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3',
+            ).play();
+            return false;
+          "
           aria-label="Play voice clip"
           ><i class="nf nf-fa-play"></i
         ></a>
@@ -148,7 +152,12 @@
         >
         <a
           href="#"
-          onclick="new Audio('https://file.garden/aC0AvcHvgSVGyTqS/Bluey/DONT_spoil_the_ending!.mp3').play(); return false;"
+          onclick="
+            new Audio(
+              'https://file.garden/aC0AvcHvgSVGyTqS/Bluey/DONT_spoil_the_ending!.mp3',
+            ).play();
+            return false;
+          "
           aria-label="Play voice clip"
           ><i class="nf nf-fa-play"></i
         ></a>
@@ -263,9 +272,11 @@
         </li>
         <li>
           <blockquote>
-            Indy ~ "My mum always says, 'what goes around, comes around!'"
+            <span class="bluey">Indy</span> ~ "My mum always says, 'what goes
+            around, comes around!'"
             <br />
-            Bluey ~ <em>tearing up</em> "What does that mean?"
+            <span class="bluey">Bluey</span> ~ <em>tearing up</em> "What does
+            that mean?"
           </blockquote>
           &mdash; Indy and Bluey in
           <cite
@@ -289,10 +300,18 @@
       </ul>
 
       <h2>
-        <q>...<em>gasp</em>, zeeeroooo!</q>
+        <q
+          >...<small><em>gasp</em></small
+          >, zeeeroooo!</q
+        >
         <a
           href="#"
-          onclick="new Audio('https://file.garden/aC0AvcHvgSVGyTqS/Bluey/zero.mp3').play(); return false;"
+          onclick="
+            new Audio(
+              'https://file.garden/aC0AvcHvgSVGyTqS/Bluey/zero.mp3',
+            ).play();
+            return false;
+          "
           aria-label="Play voice clip"
           ><i class="nf nf-fa-play"></i
         ></a>

@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
 
 //   eleventyConfig.addPassthroughCopy("content/favicon.ico");
 
-  eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "png", "gif", "jpg", "jpeg", "ttf", "ico"]);
+  eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "png", "gif", "jpg", "jpeg", "ttf", "woff", "woff2", "ico"]);
 
   eleventyConfig.addPassthroughCopy("content/favicon.*");
 //   eleventyConfig.addPassthroughCopy("content/**/*.*", {
