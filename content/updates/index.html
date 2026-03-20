@@ -1,0 +1,60 @@
+---
+eleventyImport:
+  collections: ["updates"]
+---
+
+{% from "update.njk" import update %}
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <title>Updates</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preload" as="image" href="/img/checkerboard.png" />
+
+    <script src="/script/player.js{{ nocache }}"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="Updates" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta property="og:url" content="https://purpld.neocities.org/updates" />
+    <meta name="theme-color" content="#9900ff" />
+  </head>
+  <body>
+    <div id="bgWrapper">
+      <div id="scrollingBg"></div>
+    </div>
+
+    <div id="container">
+      <a href="/" class="code" style="float: left">Home</a>
+      <div>
+        <button id="musicButton" title="Play music" onclick="toggleAudio()">
+          <div class="musicTooltip">
+            <span class="code">NOW PLAYING</span> <span id="musicTitle"></span>
+          </div>
+        </button>
+      </div>
+      <h1>Updates</h1>
+
+      <ol class="updateList">
+        {% for upd in collections.updates | reverse %}
+        <li>{{ update(upd) }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </body>
+</html>

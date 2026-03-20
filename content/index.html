@@ -1,3 +1,10 @@
+---
+eleventyImport:
+  collections: ["updates"]
+---
+
+{% from "update.njk" import update %}
+
 <!doctype html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
   <head>
@@ -290,57 +297,23 @@
         </div>
         <div id="updates" style="flex: 50%">
           <h2 class="pixel center">updates!</h2>
+          <!-- prettier-ignore -->
           <div class="innerBox">
             <div class="newUpdate">
               <h3 class="pixel center">NEW!</h3>
-              <p>
-                <time class="code copyTime" datetime="2026-03-09">
-                  (or 1AM on the 10th...)</time
-                >
-
-                I AM ALIVE I PROMISE HI HIHIHI i don't know if anybody is
-                reading this ANYWAYS but i am here and whatever the stuffs. i
-                pushed a small update that i made a while ago to my
-                <a href="/about">About</a> page a bit ago but never released and
-                added an (un)FAQ for funsies! i also made a new shrine page but
-                i need to finish it first... <strong><em>soon</em></strong
-                >!
-              </p>
+              <p>{{ update(collections.updates | last) }}</p>
             </div>
-            <p>
-              <time class="code copyTime" datetime="2025-11-07"></time>
-              hi sorry, it's been a while! i've been quite busy. <br />
-              updated the music list (also there's a lyrics marquee now that
-              I'll update too!)! i also have a nikki.top page now that'll kinda
-              act as a status thing, so that's at the top now too! :D
-              <br />
-              more soon!
+            {% for upd in collections.updates | reverse %} 
+              {% if not loop.first and loop.index <= 5 %}
+                <p>{{ update(upd) }}</p>
+              {% endif %} 
+            {% endfor %}
+
+            {% if collections.updates | length > 5 %}
+            <p style="text-align: center">
+              more at <a href="/updates">Updates</a>!
             </p>
-            <p>
-              <time class="code copyTime" datetime="2025-08-21"></time>
-              <br />
-              +
-              <a href="/defrag/entries/2025-08-21.html"
-                >new DEFRAG ZONE post!</a
-              >
-              <br />
-              + updated song list on the home page
-              <br />
-              + tone tags are also styled differently and can be hovered to show
-              their meaning
-            </p>
-            <p>
-              <time class="code copyTime" datetime="2025-07-22"></time>
-              added the <a class="code" href="/defrag">DEFRAG ZONE</a>! this is
-              a new blog section to have a bit more of a place for long form
-              thoughts and whatnot.
-              <a href="/defrag/entries/2025-07-21.html"
-                >check out my first post!</a
-              >
-              <br />
-              also some updates to the home page, including this new shiny
-              updates box!
-            </p>
+            {% endif %}
           </div>
         </div>
         <div id="defragPreview" style="flex-basis: 100%; height: min-content">

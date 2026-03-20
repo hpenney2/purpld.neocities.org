@@ -1186,3 +1186,12 @@ h1.defragTitle {
 .quiet {
   color: #aaa;
 }
+
+.updateList {
+  list-style: none inside;
+  padding: 1em;
+}
+
+.updateList li {
+  margin-bottom: 1em;
+}
