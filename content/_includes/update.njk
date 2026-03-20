@@ -1,0 +1,4 @@
+{% macro update(upd) %}
+<time class="code copyTime" datetime="{{upd.date | date}}">{{upd.data.extraDateText | safe}}</time>
+{{upd.content | safe}}
+{% endmacro %}

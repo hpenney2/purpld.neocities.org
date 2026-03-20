@@ -28,6 +28,11 @@ switch (window.location.pathname) {
         title = "Tomodachi Collection - Making a Friend"
         break;
 
+    case "/updates/":
+        audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/robloxBetterOffAlone.mp3");
+        title = "Alice Deejay - Better Off Alone (Glejs Remix)"
+        break;
+
     default:
         audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/DVT%20-%20E-ditor%20kg.mp3");
         title = "??? (DVT - E-ditor)"
