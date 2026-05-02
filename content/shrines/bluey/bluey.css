@@ -21,9 +21,6 @@ body {
   --cl__off-white: #f4f4f4;
   --cl__black: #000000;
   --cl__black--rgb: 0, 0, 0;
-  --cl__governor-bay: #2f30bf;
-  --cl__persian-blue: #2d38dd;
-  --cl__cornflower-blue: #6589eb;
   --cl__cornflower-blue--two: #6398f5;
   --cl__cornflower-blue--three: #3695d9;
   --cl__portage: #7794eb;
@@ -485,4 +482,47 @@ div:has(> .watchButton) {
 .inlineImg {
   width: auto !important;
   border-radius: 0 !important;
+}
+
+#music {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+
+#music > * {
+  margin: 0.75em;
+  text-align: center;
+  width: 100%;
+  max-width: 18em;
+}
+
+#music img {
+  max-width: 15em;
+  width: 100%;
+  border: 5px solid var(--cl__cornflower-blue--two);
+}
+#music .subText {
+  font-size: smaller;
+  margin-bottom: 0.2em;
+}
+#music ol {
+  /* padding-left: 20px; */
+}
+
+hr {
+  border-style: solid;
+}
+
+#music .single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+#music .single img {
+  max-width: 5em;
 }
