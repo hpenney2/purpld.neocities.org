@@ -8,6 +8,11 @@ switch (window.location.pathname) {
         title = "Webkinz - Quizzy's Question Corner"
         break;
 
+    case "/shrines/bluey/":
+        audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/bluey_quietGame.mp3");
+        title = "Bluey - [Unknown Track] (from The Quiet Game)"
+        break;
+
     case "/shrines/":
         audio = new Audio("https://file.garden/aC0AvcHvgSVGyTqS/skunksweeper_ost");
         title = "Webkinz - Skunksweeper Hide N' Skunk"

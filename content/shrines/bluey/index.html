@@ -1,0 +1,1802 @@
+{% macro audio(url) %}
+<a
+  href="#"
+  onclick="new Audio('{{ url | escape }}').play(); return false;"
+  aria-label="Play voice clip"
+  ><i class="nf nf-fa-play"></i
+></a>
+{% endmacro %} {% import "tone_tags.njk" as tone %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/style.css{{ nocache }}" />
+    <link rel="stylesheet" href="bluey.css" />
+    <!-- <link
+      rel="shortcut icon"
+      href="/img/webkinz/favicon.ico"
+      type="image/x-icon"
+    /> -->
+    <link
+      rel="shortcut icon"
+      href="//www.bluey.tv/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="preload" href="/fonts/OpenSans.ttf" />
+    <link rel="preload" href="/fonts/hello-headline.woff" />
+
+    <script src="/script/player.js{{ nocache }}"></script>
+    <link rel="prefetch" as="image" href="/img/player/play.png" />
+    <link rel="prefetch" as="image" href="/img/player/play_hover.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop.png" />
+    <link rel="prefetch" as="image" href="/img/player/stop_hover.png" />
+
+    <title>Bluey! ~ PURPLD'S WORLD</title>
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="Bluey!" />
+    <meta
+      property="og:description"
+      content="&quot;Wait, isn't that a kid's show?&quot;"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta property="og:url" content="https://purpld.neocities.org/bluey" />
+    <meta name="theme-color" content="var(--cl__body-copy)" />
+
+    <base target="_blank" />
+  </head>
+  <body>
+    <nav class="navCrumbs">
+      <ol>
+        <li class="navCrumb"><a href="/">Home</a></li>
+        <li class="navCrumb"><a href="/shrines">Shrines</a></li>
+        <li class="navCrumb"><strong>Bluey</strong></li>
+      </ol>
+    </nav>
+    <div id="blueyContainerOuter">
+      <div id="blueyContainer">
+        <div id="sideImages" aria-hidden="true">
+          <img
+            src="/img/bluey/renders/BlueyArtwork03.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Bingo_Website.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Mackenzie_Silly_Pose.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Muffin_1.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Socks-Official_Profile.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/WinnieBTV.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Chilli-Rain-Umbrella.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Bluey-Onesie-Zebra_Cropped.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Calypso-Official_Profile.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Chucky2.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Snickers_Dragon.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/Honey_artwork02.webp"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/BlustyKenzieThisWay.webp"
+            style="right: -30%"
+            role="presentation"
+            loading="lazy"
+          />
+          <img
+            src="/img/bluey/renders/BanditArtwork03.webp"
+            role="presentation"
+            loading="lazy"
+          />
+        </div>
+        <div style="position: relative; left: 15px; bottom: 15px">
+          <button id="musicButton" title="Play music" onclick="toggleAudio()">
+            <div class="musicTooltip">
+              <span class="code">NOW PLAYING</span>
+              <span id="musicTitle"></span>
+            </div>
+          </button>
+        </div>
+        <div class="blueyBanner">
+          <h1 style="margin: 0; font-size: unset">
+            <img
+              class="banner"
+              src="/img/bluey/bluey_transparent.png"
+              alt="BLUEY"
+            />
+          </h1>
+        </div>
+        <h2><em>"Wait, isn't that a kid's show?"</em></h2>
+        <p><strong>Yep!</strong></p>
+        <p>
+          <span class="bluey">Bluey</span> is an Australian children's TV
+          program.
+          <br />
+          you know what Bluey is. even if you know little to nothing about it,
+          it's basically impossible to avoid lol
+        </p>
+        <p>
+          Bluey is a show/cartoon about a family of Heelers, centered around, of
+          course,
+          <span class="bluey">Bluey</span>, a Blue Heeler! as well as her little
+          sister, <span class="bluey">Bingo</span>, her mum,
+          <span class="bluey">Chilli</span>, and her dad,
+          <span class="bluey">Bandit</span>!
+        </p>
+        <p>
+          despite being a TV show aimed at children, it has insane popularity
+          with not-children too, and I am one of those as it turns out!
+        </p>
+        <p>
+          and by that i mean i'm obsessed. <small><em>biscuits.</em></small>
+        </p>
+        <h2>
+          <q cite="https://www.bluey.tv/characters/muffin/"
+            >COCONUTS HAVE WATER IN THEM!</q
+          >
+          <a
+            href="#"
+            onclick="
+              new Audio(
+                'https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3',
+              ).play();
+              return false;
+            "
+            aria-label="Play voice clip"
+            ><i class="nf nf-fa-play"></i
+          ></a>
+        </h2>
+        <p>
+          yeah uh, i kinda became hyperfixated on this show starting in July
+          (2025). i randomly decided to try it on Disney+ and got into it pretty
+          quickly
+        </p>
+        <p>things of note!</p>
+        <ul>
+          <li>
+            this show is extremely cute! i love bluey, bingo, and the whole
+            family and i wish everyone could have that growing up. their family
+            dynamic and play is lovely
+          </li>
+          <li>
+            i love the lessons that bluey gives! some things are just good
+            reminders, and some things are definitely even aimed at the adults
+            and parents too. there's things for us all to learn! (or relearn,
+            too!) {#
+            <ul>
+              <li>
+                ...like how for some reason, adults take (often unnecessarily in
+                my opinion!) longer to make friends. (<cite
+                  ><a href="https://www.bluey.tv/watch/season-2/cafe/"
+                    >Cafe</a
+                  ></cite
+                >)
+              </li>
+            </ul>
+            #}
+          </li>
+          <li>
+            oh also they're Australian
+            <img
+              src="/img/australia.svg"
+              aria-hidden="true"
+              role="presentation"
+              class="inlineImg"
+              loading="lazy"
+            />. i like Australia. Australians accents are fun too. :D (i wanna
+            visit someday! pleaaaase! Brisbane actually looks really pretty)
+          </li>
+          <li>
+            oh my GOSH the sneaky tears. some episodes will just suddenly make
+            you wanna cry really bad, even if you're not a parent or anything.
+            and if you are gonna watch Bluey,
+            <strong>try to avoid spoilers</strong> in my opinion.
+            <br />
+            yes, i'm serious, avoid spoilers for this show for preschoolers.
+            <br />
+            just trust me on this one.
+          </li>
+          <li>
+            this is a kids show but it is also somehow not entirely a kids show.
+            i don't know!! there's a lot of stuff aimed at everyone i think.
+          </li>
+        </ul>
+        <h2>
+          <q cite="https://www.bluey.tv/watch/season-3/unicorse/"
+            >UH AH! <em>DON'T</em> spoil the ending!</q
+          >
+          <a
+            href="#"
+            onclick="
+              new Audio(
+                'https://file.garden/aC0AvcHvgSVGyTqS/Bluey/DONT_spoil_the_ending!.mp3',
+              ).play();
+              return false;
+            "
+            aria-label="Play voice clip"
+            ><i class="nf nf-fa-play"></i
+          ></a>
+        </h2>
+        <p class="warning">
+          <strong style="font-size: x-large">HEY!</strong> This section has
+          <strong>spoilers</strong>. Open the sections at your own risk!
+          <br />
+          I'M <s>SERIOUS</s> CEREAL!
+        </p>
+        <p style="text-align: center">
+          here I talk about some of my favorite episodes!
+          <br />
+          genuinely, <strong>i will probably add more to this soon</strong>.
+          there is a lot of episodes and i love every single one of them.
+        </p>
+        <p style="text-align: right; font-size: smaller">
+          kinda realizing a lot of these just make me sad or emotional i
+          guess...
+        </p>
+        <p style="text-align: left; font-size: smaller">
+          i guess that's why they're good though?
+        </p>
+        <p style="text-align: right; font-size: smaller">
+          maybe i just miss being a kid lol
+        </p>
+
+        <script>
+          function expandEpisodes() {
+            document.querySelectorAll("#episodes > details").forEach((e) => {
+              if (!e.hasAttribute("open")) e.setAttribute("open", true);
+            });
+          }
+          function closeEpisodes() {
+            document.querySelectorAll("#episodes > details").forEach((e) => {
+              if (e.hasAttribute("open")) e.removeAttribute("open");
+            });
+          }
+        </script>
+
+        <div style="margin: 0.5em 0">
+          <button class="watchButton" onclick="expandEpisodes()">
+            Expand All
+          </button>
+          <button class="watchButton" onclick="closeEpisodes()">
+            Close All
+          </button>
+        </div>
+        <div id="episodes">
+          {% macro watchButton(url) %}
+          <div>
+            <a class="watchButton" href="{{ url }}">Watch!</a>
+          </div>
+          {% endmacro %}
+          <details>
+            <summary><span class="bluey">Café</span> (S2 E34)</summary>
+            <blockquote class="description">
+              In the park Bluey meets a new playmate Winnie, but when Bluey
+              wants to invite her and her dad home for breakfast, she learns
+              that adults take a little bit longer to make friends.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-2/cafe/") }}
+            <p>
+              <span class="bluey">Café</span>, hands down, is one of my favorite
+              episodes BECAUSE of the, like, multiple lessons happening here!
+            </p>
+
+            <img
+              src="/img/bluey/episodes/cafe_squeezemetight.png"
+              alt="Bluey picks up Winnie into a very tight hug while Bandit and Fido offer a handshake."
+              loading="lazy"
+            />
+            <p class="subText" style="text-align: left">
+              "SQUEEZE ME TIGHT! WOOAH THAT'S TIGHT!"
+            </p>
+            <p class="subText">
+              "Nice to meet you mate."<br />
+              "Yeah, you too!"
+            </p>
+            <p>
+              Winnie and Bluey become friends meeting on the playground in the
+              morning before brekkie, but Bandit and Fido are more resistant
+              (after they drag them into their game of Cafe hehee!).
+            </p>
+            <p>
+              as the episode carries on, Winnie and Bluey slowly push Fido and
+              Dad to get closer, and it's clear that they WANT to is the thing!
+            </p>
+            <img
+              src="/img/bluey/episodes/cafe_doyoulikemydad.png"
+              alt="Winnie and Bluey talk to Fido, Winnie's dad, who is sitting at the small playground table."
+              loading="lazy"
+            />
+            <blockquote class="quote">
+              <p><span class="bluey">Bluey</span> "Do you like my dad?"</p>
+              <p>
+                <span class="bluey">Fido</span> "Croissant please! And yeah, I
+                <em>do</em> like your dad!"
+              </p>
+              <p><span class="bluey">Bluey</span> "Good."</p>
+              <p><span class="bluey">Winnie</span> "Because he likes you!"</p>
+              <p>
+                <span class="bluey">Bluey</span> "Aand, we're all out of
+                croissants." &lowast;<em>yoink</em>&lowast;
+              </p>
+            </blockquote>
+            <p style="text-align: center">and then</p>
+            <img
+              src="/img/bluey/episodes/cafe_doyouwishdad.png"
+              alt="Bluey talks with Bandit, who is now sitting by himself at the small playground table."
+              loading="lazy"
+            />
+            <blockquote class="quote">
+              <p><span class="bluey">Bluey</span> "I wish Winnie was here."</p>
+              <p><span class="bluey">Dad</span> "I know you do."</p>
+              <p>
+                <span class="bluey">Bluey</span> "Do you wish Winnie's dad was
+                here?"
+              </p>
+              <p>
+                <span class="bluey">Dad</span> "...Yeah, I do. He's good fun,
+                actually."
+              </p>
+              <p>
+                <span class="bluey">Bluey</span> "If you asked Winnie's dad to
+                be your friend, do you think he would say yes?"
+              </p>
+              <p><span class="bluey">Dad</span> "Well, I don't know! Maybe!"</p>
+              <p>
+                <span class="bluey">Bluey</span> "If you weren't my dad, I'd
+                want to be your friend."
+              </p>
+              <p>
+                <span class="bluey">Dad</span> "Aww, thamks mate. C'mon, we have
+                to get back for brekkie."
+              </p>
+            </blockquote>
+            <img
+              src="/img/bluey/episodes/cafe_winniejump.png"
+              alt="Winnie excitedly jumps into a hug with Bluey, causing the two of them to spin."
+              loading="lazy"
+            />
+            <blockquote class="quote" style="text-align: center">
+              <p>
+                <strong><em>"BLUEY!!!!!"</em></strong>
+              </p>
+              <p>
+                <strong><em>"WINNIE!!!!!"</em></strong>
+              </p>
+            </blockquote>
+            <img
+              src="/img/bluey/episodes/cafe_winniejump2.png"
+              alt="Bandit and Fido offer a friendlier handshake, smiling. Bluey and Winnie hold each other's hands happily."
+              loading="lazy"
+            />
+            <p>
+              and then they finally come to Bluey's house for brekkie and Bandit
+              gets over his nervousness of this new friendship. AND THEN WE EVEN
+              SEE THEM HANGING OUT LATER IN ANOTHER EPISODE LIKE?!
+            </p>
+            <p class="subText">
+              ALSO, CAN WE ADOPT THE WORD "BREKKIE"?! FRICK AUSTRALIA HAS SOME
+              GOOD WORDS
+              <br />
+              THE WORD "BREAKFAST" IS SO BORING
+            </p>
+            <p>
+              this episode kinda actually tackles the issue of how adults take
+              longer to make friends, which has become increasingly important to
+              me, and it's just aaaAA
+            </p>
+            <p>
+              as someone who is, apparently an adult now (?!), i hate how
+              indirect adults are. <strong>WHY</strong>. and why take so long to
+              make friends?!
+            </p>
+            <img
+              src="/img/bluey/episodes/cafe_RUN.png"
+              loading="lazy"
+              alt="Bluey and Winnie chase after Bandit and Fido who climb up a playground slide."
+            />
+            <p>
+              i also like this bit because they're CLEARLY having fun, i feel
+              like it shows that play is still fun for adults n stuff (necessary
+              even?). i think it usually looks different as most people grow up
+              but why does it have to?
+            </p>
+            <p>
+              i feel like this episode is SUPER underrated actually, i don't
+              really see many talk about it lol. i guess maybe it's because this
+              lesson is really important to me in particular due to the issues
+              i've had with making friends, especially as i've gotten older (<a
+                href="/defrag/entries/2025-08-21.html"
+                >tangentially related
+                <span class="code">DEFRAG ZONE</span> post</a
+              >). WHY DO ADULTS TAKE SO LONG TO MAKE FRIENDS?!
+              <br />
+              GENUINELY. i would <strong>LOVE</strong> if I could make a friend
+              and instantly be hugging and all fun like Bluey and Winnie are
+              literally like 20 minutes after meeting ;w;
+              <br />
+              (dawg i couldn't tell you the last time i've had someone
+              <em>jump</em> into a hug like that too hehe, that just looks fun
+              and happy)
+            </p>
+          </details>
+          <details>
+            <summary><span class="bluey">Camping</span> (S1 E43)</summary>
+            <blockquote class="description">
+              While on a camping holiday, Bluey makes a new friend called
+              Jean-Luc. Bluey may not understand him, but they find common
+              language playing and hunting for a wild Daddy pig.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-1/camping/") }}
+            <p>
+              <em>HEY WAIT YOU CAN'T JUST DO A FLASH FORWARD LIKE THAT?!</em>
+              THATS SO MEAN HOW DARE YOU
+            </p>
+            <p>
+              oh my GOSHH dude though this episode is, somehow so simple in
+              formula but just that one quote...
+            </p>
+            <blockquote class="quote">
+              <span class="bluey">Bluey</span> "Mum?" <br />
+              <span class="bluey">Chilli</span> "Yeah?" <br />
+              <span class="bluey">Bluey</span> "Why did Jean-Luc have to go?"
+              <br />
+              <span class="bluey">Chilli</span> "Their holiday was over, honey."
+              <br />
+              <span class="bluey">Bluey</span> "But I want to keep playing with
+              him! He was my friend!" <br />
+              <span class="bluey">Chilli</span> "Well, look. Sometimes, special
+              people come into our lives, stay for a bit, and then they have to
+              go." <br />
+              <span class="bluey">Bluey</span> "But that's sad!" <br />
+              <span class="bluey">Chilli</span> "It is. But the bit where they
+              <em>were</em> here was happy, wasn't it?" <br />
+              <span class="bluey">Bluey</span> "Yeah. We caught a wild pig
+              together!" <br />
+              <span class="bluey">Chilli</span> "Maybe that makes it all worth
+              it." <br />
+              <span class="bluey">Bluey</span> "Will I ever see him again?"
+              <br />
+              <span class="bluey">Chilli</span> "Well, you never know. The
+              world's a magical place!" <br />
+            </blockquote>
+            <img
+              src="/img/bluey/episodes/camping_oostarspretty!.png"
+              alt="Bingo, Mum, and Bluey (left to right) look up at the pretty purple night sky."
+              loading="lazy"
+            />
+            <p class="subText">
+              this scene is so pretty... <br />
+              <span class="bluey">Bingo</span> says &quot;ooo... stars!
+              pretty!!!&quot;
+            </p>
+            <p>
+              i freaking FEEL for Bluey. again i moved a LOT when i was little
+              so it was really rough having to say goodbye to people, and
+              there's been times where i <em>haven't</em> been able to say
+              goodbye. FRICK it was hard saying bye to people just leaving high
+              school and stuff. it really never feels fair.
+            </p>
+            <p>
+              there have been times i have cried and bawled literally
+              <em><strong>JUST</strong></em> like her in this episode... like i
+              want to NOWW even! gosh does it sting still, even. my heart...
+            </p>
+            <p>
+              <small
+                >it's not fair that i <em>can't</em> cry right now, and i don't
+                know why i can't...</small
+              >
+            </p>
+            <img
+              src="/img/bluey/episodes/camping_sad1.png"
+              alt="Bluey stands sad in front of Mum after learning about Jean-Luc leaving."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/camping_sad2.png"
+              alt="Bluey looks at the sapling that she planted with Jean-Luc, tears welling up in her eye."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/camping_reallysad3.png"
+              alt="Bluey sits into a ball in front of the sapling, beginning to cry, eyes shut hard and ears low."
+              loading="lazy"
+            />
+            <p>
+              i beg, so much, to have a moment like Bluey and Jean-Luc do at the
+              end of this Camping episode. i miss so many people. :(
+            </p>
+            <p>
+              maybe one day, i hope. when i have the money and the time and the
+              ability to travel more
+            </p>
+            <img
+              src="/img/bluey/episodes/camping_flashforward.png"
+              alt="Bluey and Jean-Luc, as teenagers, meet again as Bluey reads one of Muffin's books under the now beautifully grown tree that they had planted together."
+              loading="lazy"
+            />
+            <p class="subText">
+              &quot;Hello Bluey.&quot;
+              <br />
+              ooh, Jean-Luc's fur is so pretty too...
+            </p>
+            <p>
+              this episode's music is also one of my favorites and one of many
+              tracks on Bluey's OST that gives me feels and chills every time i
+              hear it to where i have to be careful choosing it from the albums!
+              <br />
+              oh, the peaks, the valleys, the violins...
+            </p>
+            <p>
+              so, yeah. OBVIOUSLY this one is one of my top top top top
+              <strong>TOP</strong> high favorites too. 'cause it's a really
+              personal story for me too.
+            </p>
+            <p>
+              <small
+                >and they say "OH MY GOSH YOU'RE WATCHING A CHILDREN'S SHOW?!" I
+                DON'T SEE YOU WATCHING THESE EPISODES AND WANTING TO CRY JANET
+                {{ tone.joke }} {{ tone.tag("/ex", "exaggeration") }}</small
+              >
+            </p>
+            <p>
+              <small
+                >i don't actually hear anybody say this im just really very
+                paranoid :(</small
+              >
+            </p>
+          </details>
+          <details>
+            <summary><span class="bluey">Rain</span> (S3 E18)</summary>
+            <blockquote class="description">
+              When a heavy summer rain thunders over the Heeler home, Bluey is
+              determined to dam the water in the front yard, while Mum tries to
+              stop her constantly tracking mud into the house.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-3/rain/") }}
+            <p>oh... i think i just want a mum like that. :(</p>
+            <p>
+              i lost my mom/mum at a very young age and so my family dynamic has
+              been kinda weird since then. i wanna cry everytime i see this
+              episode because
+            </p>
+            <ol>
+              <li>
+                it also kinda goes back to the "adults need/<em>want</em> to
+                play too!" thing and
+              </li>
+              <li>
+                <em><strong>I</strong></em> want to have a mum like Chilli.
+              </li>
+            </ol>
+            <p>
+              most of my play as a kid was quite independent or just with
+              friends, which is FINE but goddd i just love how much they bond
+              and the clear love that Chilli has for Bluey (and Bingo).
+            </p>
+            <p>
+              the double rainbow at the end is my breaking point. AND THE MUSIC.
+              the music does a lot too.
+            </p>
+            <p>
+              genuinely, Mr. Joff Bush i don't know how you do it but music
+              ALREADY has really strong emotional effects on me, and Bluey's
+              perhaps does it some of the most.
+            </p>
+            <p>
+              this episode's music is another one of the ones that i have to be
+              careful with on the OST because it WILL make me cry. happy tears i
+              think though?! it's just so beautiful... especially towards the
+              end when Mum finally comes to play with Bluey, and then there's
+              the version with lyrics that i think is basically just the thesis
+              of this show lol! aGGGGHHH ;w;
+            </p>
+            <p>
+              i <strong>LOVE</strong> <span class="bluey">Bluey</span> and the
+              music is a REALLY big part of that, and I think this episode is a
+              REALLY good example of that.
+              <br />
+              (the other is <span class="bluey">Sleepytime</span>...)
+            </p>
+            <p>
+              i also just kinda didn't play in the rain much. rain's scary and
+              wet and bad. except i know that it's not now and i kinda like it,
+              hehee.
+            </p>
+            <p style="text-align: right">
+              <small>...can I go play in the rain now please?</small>
+            </p>
+            <img
+              src="/img/bluey/episodes/rain_rainbow.png"
+              alt="Bluey and Mum stand in their front yard, looking off into the distance at the double rainbow that just formed after the rain stopped. Mum has her arm around Bluey."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/rain_hug.png"
+              alt="A front facing view of the two heelers. Bluey and Mum are smiling and in a light hug, looking up at the rainbows."
+              loading="lazy"
+            />
+          </details>
+          <details>
+            <summary><span class="bluey">Onesies</span> (S3 E31)</summary>
+            <blockquote class="description">
+              When Mum’s sister Brandy comes over for a visit, she brings the
+              kids onesies as a present, which has an unexpected effect on
+              Bingo.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-3/onesies/") }}
+            <blockquote class="quote">
+              <span class="bluey">Chilli</span> ~ You know how you really want
+              Bingo’s cheetah onesie? <br />
+              <span class="bluey">Bluey</span> ~ Yeah, more than anything!
+              <br />
+              <span class="bluey">Chilli</span> ~ But it doesn’t fit you, so you
+              can’t have it, and there’s not really anything anyone can do to
+              make it fit. <br />
+              <span class="bluey">Bluey</span> ~ Yeah... <br />
+              <span class="bluey">Chilli</span> ~ Well... there’s something
+              Auntie Brandy wants more than anything as well, but she can’t have
+              it, and there’s not really anything anyone can do about it. <br />
+              <span class="bluey">Bluey</span> ~ Why can’t she just have the
+              thing she wants? <br />
+              <span class="bluey">Chilli</span> ~ Because it’s not meant to be.
+            </blockquote>
+            <p>oh.</p>
+            <p>
+              yeah, uh, that one actually hurts. i'm a guy and
+              <em>very</em> gay&nbsp;(!) and not having the prospect of actually
+              having my own without shilling thousands upon thousands of dollars
+              kinda hurts. it's not the same thing at all and i don't dare to
+              compare, but i still feel and understand the pain.
+            </p>
+            <p>
+              i think this episode is also a <strong><em>very</em></strong> good
+              example of how clever this show can be with lessons sometimes.
+              this one is so dang sneaky too... good on ya mate.
+            </p>
+            <p>
+              like, it's a fun lesson for the kids to enjoy and take in, but
+              it's also a lesson for the adults and somehow its kinda the same
+              lesson but?!?!
+              <br />
+              and then the kids are like &quot;WHY ARE YOU CRYING?!&quot;
+            </p>
+            <p>yeah no what an episode.</p>
+            <img
+              src="/img/bluey/episodes/onesies_talking.png"
+              alt="Mum is talking to Bluey, the two of them hiding in a bathtub."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/onesies.png"
+              alt="Brandy reaches her arms out after Bingo runs off, looking sad."
+              loading="lazy"
+            />
+          </details>
+          <details>
+            <summary><span class="bluey">The Sign</span> (S3 E49)</summary>
+            <blockquote class="description">
+              The 28 minute Bluey special. When the Heeler home goes up for
+              sale, Bluey is not at all happy about the news.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-3/the-sign/") }}
+            <p>
+              oh come on OBVIOUSLY <span class="bluey">The Sign</span> was gonna
+              be here!
+            </p>
+            <p>
+              seriously though on that spoiler warning.
+              <strong style="font-size: larger"
+                >IF YOU HAVEN'T SEEN <span class="bluey">The Sign</span> YET,
+                STOP READING THIS AND GO WATCH IT AFTER WATCHING THE WHOLE
+                SERIES!</strong
+              >
+              there's a LOT of sneaky little callbacks that won't make sense or
+              that you'll miss otherwise, and the lead up to The Sign is worth
+              it!!!! just TRUST ME OH MY GOSHHHH
+            </p>
+            <p>
+              nono, this one hits REAAAAALLLLY hard for me because I moved, A
+              <em><strong>LOT</strong></em> when I was little. like, to the
+              point where everytime i explain, people are like &quot;oh,
+              military child?&quot; and i'm like &quot;NO!&quot; we just, did
+              that! for some reason! lol
+            </p>
+            <p>
+              but uh, yeah, no, that did have an effect on me and it meant i
+              couldn't really keep &quot;childhood friends&quot; much. the
+              ending of <span class="bluey">Daddy Dropoff</span> makes me feel
+              the same way for the same reason, it's not FAIR that i never got
+              to have that. :(
+            </p>
+            <p>
+              also, Frisky actually kinda snapping while on the phone with Rad
+              actually startled and rattled me the first time I watched this
+              episode! maybe that's a sign of something... who's to say.
+              <small>(no pun intended lol)</small>
+              <br />
+              really accurate writing though, jeez! well done hehe!
+            </p>
+            <p>
+              i say that The Sign is
+              <strong class="bluey" style="font-size: xx-large"
+                >ABSOLUTE&nbsp;CINEMA</strong
+              >
+              and i do NOT say that lightly.
+              <strong>
+                The Sign may genuinely, fully, unironically be the best most
+                emotional heart touching piece of television that I've watched
+                in my entire life.
+              </strong>
+              it is CLEAR how much they care about Bluey and it SHOWS. holy
+              FRICK.
+            </p>
+            <p>
+              the amount i wanted to <strong>CRY AND BAWL</strong> while
+              watching this ENTIRE FLIPPING EPISODE.
+            </p>
+            <p>
+              maybe a lot of that is attributed to how personal the story is to
+              me too (like, really, really, <em>really</em> personal to me), but
+              i don't really care. The Sign is a testament to how awesome
+              <span class="bluey">Bluey</span> is.
+            </p>
+            <p>
+              it is also the only TV that has actually had some success in
+              making me cry in many years (not just <em>feel</em> like I
+              want/need to).
+            </p>
+            <p>
+              Meg Washington, Calypso's voice by the way, also sings the ending
+              song, <strong>Lazarus Drug</strong>, and it just... i feel so
+              emotional just getting there and it feels like my heart stops.
+            </p>
+            <p>but FRICK... Bandit pulling the sign out...</p>
+            <p>i wish that had happened sometimes when i was younger.</p>
+            <hr />
+            <p>
+              i will say, as of writing this, i've only watched The Sign ONCE,
+              because i really want to experience this story again when i'm
+              ready. i've rewatched basically ALL of Bluey so many times by now
+              but The Sign is a very very very very very special episode to me
+              and I don't wanna ruin it i guess.
+            </p>
+          </details>
+          <details>
+            <summary><span class="bluey">Driving</span> (S3 E20)</summary>
+            <blockquote class="description">
+              Bluey and Mum race against the clock to buy milk for Agatha.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-3/driving/") }}
+            <p>
+              okay i NEED to have a few fun ones after all the emotionals bits
+              and feels and gut punches lol &gt;p&lt;
+            </p>
+            <p>
+              i like this one because this just does actually seem like a fun
+              game lol, but also I do feel for Chilli!
+            </p>
+            <blockquote class="quote">
+              "It's just the driving around in circles. I think I'm better when
+              I've got a purpose, like doing things for people, you know?"
+            </blockquote>
+            <p>
+              ...while actively trying to text back and forth with a coworker in
+              a slightly bleh meh mood from said coworker, lol
+            </p>
+            <p>
+              i hate doing work but i am a people pleaser to a tee and
+              regardless of that i do actually like doing things for people! i
+              would say that I feel like i'm pretty good at it even!
+            </p>
+            <img
+              src="/img/bluey/episodes/driving_window1.png"
+              alt="The (imaginary) shop is closed. Bluey plots to ram into the shop with an evil grin on her face."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/driving_window2.png"
+              alt="Bluey floors the Mum Car. Chilli warns her."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/driving_window3.png"
+              alt="An evil teeth smile grows on Bluey's face. Mum braces for imminent impact."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/driving_window4.png"
+              alt="Crashed, both heelers splayed on the floor. Mum makes Bluey's windshield wiper arms go one last time, weakly."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/driving_fastmusic.png"
+              alt='Both heelers chilling with "fast music" on the radio.'
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/driving_tiltControls.png"
+              alt="The Mum Car is tilting on one side! Bluey holds on tight trying to balance the car with her weight."
+              loading="lazy"
+            />
+            <p>
+              thank you Mrs. Chilli Mum for committing to the bit. i wanna do
+              that, that look fun, please and thank you.
+            </p>
+          </details>
+          <details>
+            <summary><span class="bluey">The Pool</span> (S1 E22)</summary>
+            <blockquote class="description">
+              As they prepare for a trip to the pool, Bluey and Dad tease Mum
+              about being fussy and over prepared. But they soon find out the
+              hard way, that doing the boring things, makes the fun stuff
+              possible.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-1/the-pool/") }}
+            <p>
+              aww, this is a very sweet and fun episode in the end, and i REALLY
+              like the music for this one.
+            </p>
+            <p>
+              i dunno, there's just something about it! and i feel like it's
+              another underrated Season 1 episode (i feel like most Season 1
+              episodes are underrated to be honest! i get it, there's a
+              <em>LOT</em> of really good stuff in S2 and S3 but don't forget
+              about Season 1 mate!)
+            </p>
+            <p>
+              i think it kinda gives me some nostalgia for hanging out with my
+              family at the pool over the summer is part of it too :D
+            </p>
+            <p>
+              also this episode just gets very chaotic and its really funny. i
+              love this one hehe
+            </p>
+            <img
+              src="/img/bluey/episodes/thepool_bingo1.png"
+              alt="Dad is trying to pull Bingo out of the pool, who is actively refusing, hanging onto the ladder bars."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/thepool_bingo2.png"
+              alt="Bingo jumps and screams after now seeing the pool cleaner right behind her."
+              loading="lazy"
+            />
+            <p class="subText">
+              i was also always afraid of the pool cleaner.
+              <br />
+              WHY ARE THEY BUILT SO SCARY?
+            </p>
+            <img
+              src="/img/bluey/episodes/thepool_bluey.png"
+              alt="Bluey looks up at the surface of the water, holding diving rings."
+              loading="lazy"
+            />
+            <p class="subText">
+              <em>awww...</em> how sweet. :)
+              <br />
+              also oh my GOSH DIVING FOR THINGS IS SO FUN!
+              <br />
+              TORPEDOS N RINGS? ALL DAY BABYY
+            </p>
+            <p>
+              also, related, why is Uncle Stripe just like actually rich lol
+            </p>
+            <p>
+              aw man now i wanna go swimming! lol
+              <br />
+              it is starting to get warm again here, so maybe soon!
+            </p>
+          </details>
+          <details>
+            <summary><span class="bluey">Dad Baby</span> (S2 E13)</summary>
+            <blockquote class="description">
+              When Bingo finds her old papoose baby-harness and Dad puts it on
+              to show her how it works, Bingo climbs in and a new game is born:
+              Dad Baby!
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-2/dad-baby/") }}
+            <blockquote class="quote">
+              <p>
+                <span class="bluey">Bluey</span> "Uhh, Lucky's Dad? Can you give
+                us a hand with something?"
+              </p>
+              <p>
+                <span class="bluey">Lucky's Dad</span> "Yeah, no worries Bluey!"
+              </p>
+              <hr />
+              <p>
+                <span class="bluey">Lucky's Dad</span> "I DIDN'T KNOW THIS WAS
+                THE SOMETHING!"
+              </p>
+              <p><span class="bluey">Bandit</span> "HARDEN UP PAT."</p>
+            </blockquote>
+            <img
+              src="/img/bluey/episodes/dadbaby_thesomething.png"
+              alt="The Something. Lucky's Dad, on his knees, looks angrily at Bandit who is laying in a kiddie pool, wearing a papoose with Bingo in it."
+              loading="lazy"
+            />
+            <p>
+              fun fact, I'm pretty sure this is actually the FIRST episode that
+              we learn that Lucky's Dad's name is Pat! lol &gt;p&lt;
+            </p>
+            <p>
+              but uh yes obligatory mention of the Banned Episode because i'm a
+              filthy 'MURICAN
+              <img
+                src="/img/us.png"
+                class="inlineImg"
+                aria-hidden="true"
+                alt=""
+              />
+              and we don't get to have fun here lol
+            </p>
+            <p>
+              no unironically this episode is hilarious and i'm not surprised
+              its banned because oh my god i know people would have freaked out
+              when i was younger if this was on the TV lol
+            </p>
+            <p>
+              i heard this isn't actually purely from Disney being a bum but
+              actually because the episode would have been rated TV-Y7
+              <img
+                src="/img/bluey/TV-Y7_icon.svg"
+                class="inlineImg"
+                aria-hidden="true"
+                alt=""
+              />, which therefore would have also made the
+              <em>entire show</em> TV-Y7
+              <img
+                src="/img/bluey/TV-Y7_icon.svg"
+                class="inlineImg"
+                aria-hidden="true"
+                alt=""
+              />
+              instead of it's current TV-Y
+              <img
+                src="/img/bluey/TV-Y_icon.svg"
+                class="inlineImg"
+                aria-hidden="true"
+                alt=""
+              />
+              rating on Disney+. this would have made it unable to be aired on
+              channels like Disney Jr.!
+              <br />
+              (still gonna be angy at Disney though lol)
+            </p>
+            <img
+              src="/img/bluey/episodes/dadbaby_mumstrikesagain.png"
+              alt="Chilli baps Bandit in the head with a rolled up magazine as he runs away."
+              loading="lazy"
+            />
+            <img
+              src="/img/bluey/episodes/dadbaby_ithoughtyou.png"
+              alt="Lucky's Dad still looks angrily at Bandit in the kiddie pool, who now has a confused expression."
+              loading="lazy"
+            />
+            <blockquote class="quote">
+              <p>
+                <span class="bluey">Lucky's Dad</span> "But I don't know how to
+                deliver up a baby!"
+              </p>
+              <p>
+                <span class="bluey">Bandit</span> "I thought you grew up at a
+                FARM!"
+              </p>
+              <p><span class="bluey">Lucky's Dad</span> "WE GREW SORGHUM!"</p>
+            </blockquote>
+            <img
+              src="/img/bluey/episodes/dadbaby_bingo.png"
+              alt="In a more detailed and closeup art style, Bingo looks happily up at Bandit, smiling."
+              loading="lazy"
+            />
+            <p class="subText">aww Bingo is so cute!!!! hehee</p>
+          </details>
+          <details>
+            <summary><span class="bluey">Sleepytime</span> (S2 E26)</summary>
+            <blockquote class="description">
+              After her bedtime story, Bingo tells Mum that tomorrow morning she
+              will be waking up in her own bed. But as she drifts off to sleep,
+              Bingo has a bizarre dream that takes her on a wild adventure.
+            </blockquote>
+            {{ watchButton("https://www.bluey.tv/watch/season-2/sleepytime/") }}
+            <p>
+              oh and of COURSE, i have to talk about one of
+              <strong
+                >THE LITERALLY MOST HIGHLY RATED EPISODES OF TELEVISION
+                <em>OF ALL TIME!</em></strong
+              >
+              I'M NOT KIDDING, LOOK THIS UP ON IMDB!
+            </p>
+            <p>
+              <span class="bluey">Sleepytime</span> is one of the best and most
+              emotional episodes of TV I've ever watched and I fully understand
+              why everyone is crazy about it lol hehe
+            </p>
+            <p>
+              and the MUSIC OH MY GOSH. I said a similar thing about
+              <span class="bluey">The Sign</span>, and for good reason too! But
+              Sleepytime is really special too honestly. Gosh, I want to CRY
+              everytime the music peaks at the very end
+            </p>
+            <p>
+              <strong
+                >unironically, if someone is like "why watch Bluey?" THIS IS
+                WHY!!!!
+              </strong>
+            </p>
+            <p>
+              they somehow managed to make this episode sad for all ages and i
+              don't...
+              <br />
+              that's a werid new tagline lol
+              <br />
+              "SAD FOR ALL AGES!"
+              <br />
+              but like in a <em>good</em> way, y'nknow?
+            </p>
+            <p>
+              I DON'T HAVE KIDS. THIS EPISODE MAKES ME SAD. I FEEL LIKE BINGO. I
+              DON'T KNOW I RESONATE WITH HER :(
+            </p>
+            <p>
+              in Sleepytime, i see that there are metaphors or respresentations
+              of
+            </p>
+            <ul>
+              <li>mainly, the struggle of parenting lol</li>
+              <li>
+                Mum is the Sun, the source of light and life, and love as she
+                says "I'll always be here..."
+              </li>
+              <li>
+                loss?! (Floppy leaving, and also "even if you can't see me")
+              </li>
+              <li><em>MORE THAT I CAN'T EVEN FIGURE OUT</em></li>
+            </ul>
+            <p>
+              and, on top of all of this, this episode is a MASTERPIECE OF
+              ILLUSTRATION. WHAT THE FRICK MAN.
+            </p>
+            <p>like, this episode is just so... pretty... hehehe</p>
+            <img
+              src="/img/bluey/episodes/sleepytime_biggirlsleep.png"
+              loading="lazy"
+              alt="Bingo says good night to Mum, holding her stuffed rabbit, Floppy. Glow-in-the-dark stars cover the walls."
+            />
+            <p class="subText">i want those stars... hehe</p>
+
+            <img
+              src="/img/bluey/episodes/sleepytime_hug.png"
+              loading="lazy"
+              alt="Bingo hugs Floppy closely."
+            />
+            <img
+              src="/img/bluey/episodes/sleepytime_floppy1.png"
+              loading="lazy"
+              alt="Dreaming, in space, Bingo waves goodbye to the now animated Floppy who swims away."
+            />
+            <img
+              src="/img/bluey/episodes/sleepytime_floppy2.png"
+              loading="lazy"
+              alt="Bingo is now crying, still waving goodbye."
+            />
+
+            <img
+              src="/img/bluey/episodes/sleepytime_sun1.png"
+              loading="lazy"
+              alt="Bingo flies on a comet towards the Sun as the cosmos fly past her."
+            />
+            <img
+              src="/img/bluey/episodes/sleepytime_sun2.png"
+              loading="lazy"
+              alt="Bingo stands on the small planet Mercury, staring at the Sun."
+            />
+            <blockquote class="quote">
+              <span class="bluey">Bingo</span> "I have to go. I'm a big girl
+              now." <span class="bluey">Mum</span> "Remember I'll always be here
+              for you, even if you can't me.
+              <em class="bluey">Because I love you.</em>"
+              <small>(echoey)</small>
+            </blockquote>
+            <p>
+              WHAT THE <em>FRICK</em> SHOW I THOUGHT THIS WAS SUPPOSED TO BE A
+              KIDS SHOW NOT MAKING ME FEEL LIKE I NEED TO RUN TO GET A HUG FROM
+              MY PARENTS THAT'S SO MEAN
+            </p>
+            <p>
+              ahem. what i mean to say is that Sleepytime is freaking amazing
+              and deserves the praise. liteally every part of it, the story, the
+              art, and the music, is a masterful piece of creation made with
+              CLEAR care. it's SO clear how much everyone working on Bluey
+              really cares about the show and it really shows here. heheh. and
+              they even manage to throw in a little bit of comedy with all of
+              that!
+            </p>
+            <p class="subText">
+              99 bottles of thing on the wall, 99 bottles of thing, and if these
+              bottles should happen to fall, they'll be 97&mdash; 8 bottles of
+              thing on the wall.
+            </p>
+            <p class="subText">HOOOOO! biscuits...</p>
+            <p>
+              also, one of my favorite plushies is now named Floppy because of
+              Bluey and Sleepytime is part of why, so, yeah hehe
+            </p>
+          </details>
+        </div>
+        <h2>favorite quotes</h2>
+        <p>
+          admittedly i already used some of these for titles here lol
+          <br />
+          but still, here's an (assorted) list of some of my favorite quotes
+          from the show, whether they're funny or really impactful.
+        </p>
+        <ul class="quoteList">
+          <li>
+            <blockquote>
+              "You kids just go about it, don't you?... Just go about it."
+            </blockquote>
+            &mdash; Chilli in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-3/relax/"
+                >Relax (S3 E42)</a
+              ></cite
+            >
+          </li>
+          <li>
+            <blockquote>
+              "I don't want a valuable lime lesson! I just want an ice cream..."
+              {{
+              audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep46-Ice-Cream_QUOTE_Bluey_Lime-Lesson.mp3")
+              }}
+            </blockquote>
+            &mdash; Bluey in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-2/ice-cream/"
+                >Ice Cream (S2 E46)</a
+              ></cite
+            >
+            <p class="subText">me, basically daily</p>
+          </li>
+          <li>
+            <blockquote>
+              "COCONUTS HAVE WATER IN THEM!" {{
+              audio('https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S01Ep39-The-Sleepover_QUOTE_Muffin_Coconuts-Have-Water.mp3')
+              }}
+            </blockquote>
+            &mdash; Muffin in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-1/the-sleepover/"
+                >The Sleepover (S1 E40)</a
+              ></cite
+            >
+          </li>
+          <li>
+            <blockquote>
+              "Remember I'll always be here for you, even if you can't see me…
+              because I love you." {{
+              audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep26-Sleepytime_QUOTE_Chilli_I-Love-You.mp3")
+              }}
+            </blockquote>
+            &mdash; Chilli in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-2/sleepytime/"
+                >Sleepytime (S2 E26)</a
+              ></cite
+            >
+            <p class="subText">
+              Sleepytime had an impact on me that I can't quite put into words.
+              <br />A good mum.
+              <small><em>anyways, i'm gonna go CRY now i guess</em></small>
+            </p>
+          </li>
+          <li>
+            <blockquote>
+              "Bingo, sometimes does your outside voice say 'yes' when your
+              inside voice really means 'no'?"
+            </blockquote>
+            &mdash; Chilli in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-2/dance-mode/"
+                >Dance Mode (S2 E1)</a
+              ></cite
+            >
+            <p class="subText">
+              i'm a bit of a people pleaser so...
+              <br />
+              yeah. felt that one.
+            </p>
+          </li>
+          <li>
+            <blockquote>
+              "Mum, how do animals with no tails know when they're happy?" {{
+              audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep43-Duck-Cake_QUOTE_Bingo_No-Tails.mp3")
+              }}
+            </blockquote>
+            &mdash; Bingo in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-2/duck-cake/"
+                >Duck Cake (S2 E43)</a
+              ></cite
+            >
+            <p class="subText">
+              i... would also like to know, Bingo.
+              <br />
+              it's genuinely a good question.
+              <br />
+              humans are animals with no tails and i don't know
+              <br />
+              i haven't stopped thinking about this since watching this episode
+            </p>
+          </li>
+          <li>
+            <blockquote>"hehehe, <em>bottomless</em>."</blockquote>
+            &mdash; Bingo in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-1/the-claw/"
+                >The Claw (S1 E19)</a
+              ></cite
+            >
+          </li>
+          <li>
+            <blockquote>
+              <span class="bluey">Indy</span> "My mum always says, 'what goes
+              around, comes around!'"
+              <br />
+              <span class="bluey">Bluey</span> <em>tearing up</em> "What does
+              that mean?"
+            </blockquote>
+            &mdash; Indy and Bluey in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-1/markets/"
+                >Markets (S1 E20)</a
+              ></cite
+            >
+          </li>
+          <li>
+            <blockquote>
+              "It's just the driving around in circles. I think I'm better when
+              I've got a purpose, like doing things for people, you know?"
+            </blockquote>
+            &mdash; Chilli in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-3/driving/"
+                >Driving (S3 E20)</a
+              ></cite
+            >
+          </li>
+          <li>
+            <blockquote>
+              <span class="bluey">Chilli</span> "Well, look. Sometimes, special
+              people come into our lives, stay for a bit, and then they have to
+              go." <br />
+              <span class="bluey">Bluey</span> "But that's sad!" <br />
+              <span class="bluey">Chilli</span> "It is. But the bit where they
+              <em>were</em> here was happy, wasn't it?"
+            </blockquote>
+            &mdash; Chilli and Bluey in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-1/camping/"
+                >Camping (S1 E43)</a
+              ></cite
+            >
+            <p class="subText">oh... :(<br />my feels...</p>
+          </li>
+          <li>
+            <blockquote>
+              <span class="bluey">Bluey</span> "Okay dude!" <br />
+              <span class="bluey">Chilli</span> "And stop calling me
+              'duude'!"<br />
+              <span class="bluey">Bluey</span> "Sorry, dude."<br />
+              <span class="bluey">Bandit</span> "BLUEY, CAN IT."<br />
+              <span class="bluey">Bluey</span> "Sure thing dude!"<br />
+              <span class="bluey">Bandit</span> "Bluey, I'm serious!"<br />
+            </blockquote>
+            &mdash; Bluey, Chilli, and Bandit in
+            <cite
+              ><a href="https://www.bluey.tv/watch/season-2/favourite-thing/"
+                >Favourite Thing (S2 E7)</a
+              ></cite
+            >
+            <p class="subText">
+              i got in trouble for doing this when i was little &gtp&lt;
+            </p>
+          </li>
+        </ul>
+
+        <h2>just... random bits and facts! (and opinions)</h2>
+        <ul>
+          <li>
+            i like the name Mackenzie. i hadn't heard it on a boy before (which,
+            after learning about it, is ironic considering Mac means "Son of")
+            and i may be stealing it in the future.
+          </li>
+          <li>
+            <span class="bluey">Calypso</span> is one of my favorite characters!
+            i really wish i had someone like her in my life sometimes lol
+          </li>
+          <li>
+            the kid voice actors in Bluey are not credited unlike many shows,
+            allowing them to actually have a private life! wowwee wait why isn't
+            that standard actually&mdash;
+          </li>
+          <li>
+            dogs in the Blueniverse seem to have evolved as humans did,
+            effectively replacing humans as the dominant species interestingly,
+            invoking the same language seperation between "dogs" and "animals"
+            (like Bandit in <span class="bluey">Asparagus</span> saying "Because
+            we're not animals.")! this doesn't seem to be a world where all
+            animals have these properties because other animals are kept as
+            pets, including cats seemingly.
+            <br />
+            this is <em>also</em> technically implied by the clever evolution
+            bits in <span class="bluey">Flat Pack</span>!
+          </li>
+          <li>
+            <a href="https://www.bluey.tv/watch/the-movie/"
+              >there is a Bluey movie coming out on August 6, 2027.</a
+            >
+            i am very excited but also really sad because Joe Brumm, the
+            original creator of Bluey, is taking a break from the series to
+            focus on the movie. i really really <em>really</em> hope there's a
+            Season 4. surely someone and someone good must take over such an
+            amazing and heartfelt show? ...please? :(
+            <ul>
+              <li>
+                similarly related, a lot of people say that they maybe want to
+                see future seasons do a time jump and age everyone up, but this
+                idea really makes me sad for some reason and i really really
+                don't want that actually?? i feel really alone in that sentiment
+                too, sadly. :(
+                <br />
+                i think it's because i feel a lot of comfort in grounding myself
+                in the childlike everything of Bluey because that's been a part
+                of myself that i've had difficulty rekindling for a lil bit.
+                those lessons have reminded me to be that kid i always have been
+                again that i feel like i've been kinda hiding away for so long.
+                i dunno. Bluey as a show did a lot for me in that kind of a
+                sense I guess, so I don't want that to go away, you know?
+              </li>
+            </ul>
+          </li>
+          <li>
+            but, yes, i think most of all, Bluey just reminds me how to be a kid
+            again! it's not easy! i see some part of myself in like every single
+            one of the characters somehow lol, Bluey, Bingo, Mum, Dad, even
+            Muffin at times when i was little lol, and Honey too (HA
+            NEEEERRRDD!), and there's something really
+            <strong>special</strong> about that, you know?
+            <br />
+            i would say that Bluey has literally changed my life because of
+            that, which sounds silly to say over a kids show but, it really has.
+            the child part of my brain feels like it was locked away some time
+            ago and Bluey has helped rekindle that. and the show just makes me
+            happy :D
+            <ul>
+              <li>
+                (it may also be the like, kinda quarter life crisis i was
+                already having when i first discovered Bluey, although it may
+                have deepend the catharsis uhh lol, in like a good way though i
+                think hehe)
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>
+          <q cite="https://www.bluey.tv/watch/season-2/flatpack/"
+            >I'm not taking advice from a cartoon dog.</q
+          >
+          {{
+          audio("https://www.bluey.tv/wp-content/uploads/2023/07/Bluey-S02Ep24-Flatpack_QUOTE_Bandit_Cartoon-Dog-1.mp3")
+          }}
+        </h2>
+        <p style="text-align: center">
+          (in other words, random comments I've heard about
+          <span class="bluey">Bluey</span> lol)
+        </p>
+        <ul class="quoteList">
+          <li>
+            <blockquote>
+              <span class="bluey">Jay</span> "Dude, this show, don't act&mdash;
+              the title has never been <em>any</em> indication!"
+              <br />
+              <span class="bluey">Adam</span> "Jay, I have been wary since
+              Copycat, I don't trust <em>ANY</em> of these titles!" <br />
+              <span class="bluey">Jay</span> "Look, this one will go
+              right&mdash; this one goes right for the throat baby. All the
+              time. This is&mdash; this is an emotional jugular show, it does
+              not&mdash; there is no... this is&mdash; <em>Cerulean Sky</em>!"
+            </blockquote>
+            &mdash; Jay and Adam from
+            <a href="https://www.youtube.com/@pReviewd">pReview'd</a> (<a
+              href="https://youtu.be/lb9-Znz91K0?t=453"
+              >watch!</a
+            >)
+            <p class="subText">
+              Adam got hit in the feels by Copycat. this does not usually happen
+              lol.
+            </p>
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                "And then this pink poodle comes to console her, looks directly
+                into the camera and says, 'You're doing great.'
+              </p>
+              <p>
+                I'm a he/him male with no kids and I still get teary-eyed just
+                <em>thinking</em> about that episode!
+              </p>
+              <p>
+                People will tell you, 'Bluey is a kids show that adults can
+                enjoy too!'
+                <br />
+                <strong>NO</strong>! That episode wasn't <em>for</em> the kids!
+                It was directed at ALL the moms watching who were doubting their
+                motherhood!"
+              </p>
+            </blockquote>
+            &mdash;
+            <a href="https://www.youtube.com/@theodd1sout">TheOdd1sOut</a>
+            (<a href="https://youtu.be/nEQHiJVH79o?t=468">watch!</a>)
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                I've always said there are three audiences for Bluey: kids,
+                people with kids, and people who were once kids.
+              </p>
+            </blockquote>
+            &mdash;
+            <a
+              href="https://www.youtube.com/watch?v=WwP77zOvkys&lc=UgxwdAStuVqYGM54VjB4AaABAg"
+              >random commenter</a
+            >
+            on
+            <a href="https://www.youtube.com/watch?v=WwP77zOvkys"
+              >this pReview'd episode</a
+            >
+            <p class="subText">THIIIIIIS</p>
+          </li>
+        </ul>
+        <h2>
+          <q cite="https://www.bluey.tv/watch/season-2/dance-mode/"
+            >DANCE MODE!</q
+          >
+          {{audio("https://file.garden/aC0AvcHvgSVGyTqS/Bluey/Bluey_DanceMode.mp3")}}
+        </h2>
+        <p>
+          oh my gosh, my goodness how could I have barely mentioned the music up
+          until now! Bluey's OST is a huge reason why I love the show too, it
+          adds so much to the episodes and so much of the music and sound design
+          is capable of just making me want to cry really badly or giving me
+          chills like
+        </p>
+        <p>
+          AUGHH i don't know but here are some of my
+          <strong>favorites</strong> (from the albums that have released! there
+          are some from episodes that aren't in albums sadly)
+        </p>
+        <p>
+          <span class="bluey">Joff Bush</span> and everyone who has worked on
+          Bluey's music are awesome!
+        </p>
+        <section id="music">
+          <div>
+            <img
+              src="/img/bluey/bluey_album.jpg"
+              alt="Bluey: The Album"
+              loading="lazy"
+            />
+            <ol>
+              <li value="5">Taxi</li>
+              <li value="6">The Claw (Pachelbel's Canon)</li>
+              <li value="7">
+                Pool
+                <p class="subText">
+                  i like this episode a lot too it's a fun one&nbsp;:D
+                </p>
+              </li>
+              <li value="10">The Weekend</li>
+              <li value="11">Wagon Ride</li>
+              <li value="12">
+                Camping
+                <p class="subText">
+                  i talk about <span class="bluey">Camping</span> above and why
+                  this song makes me sad heh
+                </p>
+              </li>
+              <li value="13">Fruit Bat</li>
+              <li value="16">
+                I Know a Place (The Creek Song)
+                <p class="subText">the creek... is... beautiful!</p>
+              </li>
+              <li value="17">
+                Bluey Theme Tune
+                <p class="subText">oglibatory mention lol &gt;p&lt;</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <img
+              src="/img/bluey/dance_mode_album.jpg"
+              alt="Bluey: Dance Mode!"
+              loading="lazy"
+            />
+            <ol>
+              <li value="2">Dance Mode</li>
+              <li value="8">
+                Cat Squad!
+                <p class="subText">CAT SQUAD!</p>
+              </li>
+              <li value="10">
+                Sticky Gecko
+                <p class="subText">"STICKY GECKO!!!!"</p>
+              </li>
+              <li value="12">Army</li>
+              <hr />
+              <li value="15">Rain (Instrumental)</li>
+              <li value="16">Rainbow</li>
+              <li value="17">
+                Rain (Boldly in the Pretend) – Feat. Jazz D’Arcy
+                <p class="subText">
+                  Rain is one of my favorite episodes and these songs make me
+                  VERY emotional ;w;
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <img
+              src="/img/bluey/rug_island_album.jpg"
+              alt="Bluey: Rug Island"
+              loading="lazy"
+            />
+            <ol>
+              <li value="1">
+                Bluey Theme Tune (Vocal Version)
+                <p class="subText">
+                  ooh this one just sounds cool hehe! i like acapella :3
+                </p>
+              </li>
+              <li value="6">Escape</li>
+              <li value="7">Onesies</li>
+              <li value="8">Fairytale</li>
+              <li value="13">Bin Night</li>
+              <li value="15">
+                Café
+                <p class="subText">
+                  it's really lovely music that pairs with one of my favorite
+                  episodes!
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <img
+              src="/img/bluey/up_here_album.jpg"
+              alt="Bluey: Up Here!"
+              loading="lazy"
+            />
+            <p>
+              now... for one of the best albums...
+              <br />
+              THE ORCHESTRAL ALBUM!
+            </p>
+            <ol>
+              <li value="1">Bluey Theme Tune (Orchestral Version)</li>
+              <li value="2">
+                Sleepytime
+                <p class="subText">
+                  one of the BEST TV SOUNDTRACKS I'VE EVER HEARD. I WANT TO CRY
+                  EVERYTIME I GET TO THE END OF THIS SONG. i wrote about
+                  Sleepytime above already too and the music is a huge part of
+                  why i love this episode
+                </p>
+              </li>
+              <li value="8">Hotel</li>
+              <hr />
+              <li value="16">We'll See</li>
+              <li value="17">
+                Bluey Theme Tune (The Sign Version)
+                <p class="subText">
+                  oh... yeah this one still makes me sad. it sounds like a Pixar
+                  movie. specifically <cite>Inside Out</cite> i think
+                  <br />
+                  i already wrote about
+                  <span class="bluey">The Sign</span> above, it's such a
+                  beautiful episode that i feel so personally starstruck by lol
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <img
+              src="/img/bluey/verandah_santa_album.jpg"
+              alt="Bluey: Verandah Santa"
+              loading="lazy"
+            />
+            <ol>
+              <li value="1">Let's Play Verandah Santa</li>
+              <li value="2">
+                Verandah Santa
+                <p class="subText">
+                  this ones really sweet and just reminds me of the episode
+                  which is nice, hehee
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3>Singles</h3>
+            <div class="single">
+              <img
+                src="/img/bluey/burger_dog_album.jpg"
+                alt="Bluey: Burger Dog"
+                loading="lazy"
+              />
+              <div>
+                Burger Dog
+                <p class="subText">
+                  "Dad, can you play a song on your phone for us?" <br />
+                  "Ah, yeah, okay, as long as it's not too annoying." <br />
+                  "No, it's not annoying!" <br />
+                  "What's it called?" <br />
+                  "<strong>BURGER DOG</strong>!"
+                </p>
+              </div>
+            </div>
+            <div class="single">
+              <img
+                src="/img/bluey/rug_island_full_verison_album.jpg"
+                alt="Rug Island (Full Version)"
+                loading="lazy"
+              />
+              <div>
+                Rug Island (Full Version)
+                <p class="subText">
+                  it's... so... beautiful! and what a heartwarming story too :)
+                </p>
+              </div>
+            </div>
+            <div class="single">
+              <img
+                src="/img/bluey/batflowers_album.jpg"
+                alt="Batflowers"
+                loading="lazy"
+              />
+              <div>
+                Lazarus Drug
+                <br />
+                <small>by Meg Washington</small>
+                <p class="subText">
+                  this is actually NOT a single, nor is it *technically* from
+                  the Bluey soundtrack! however, it IS played in
+                  <span class="bluey">The Sign</span> and OH MY GOSH. i'm not
+                  spoiling anything, but if you've watched it, read my bit about
+                  the episode above please!
+                </p>
+                <p class="subText">
+                  Meg Washington <em>is</em> Calypso, by the way, one of my
+                  favorite characters!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <h2>
+          <q
+            >...<small><em>gasp</em></small
+            >, zeeeroooo!</q
+          >
+          <a
+            href="#"
+            onclick="
+              new Audio(
+                'https://file.garden/aC0AvcHvgSVGyTqS/Bluey/zero.mp3',
+              ).play();
+              return false;
+            "
+            aria-label="Play voice clip"
+            ><i class="nf nf-fa-play"></i
+          ></a>
+        </h2>
+        <p>
+          honestly, i can't put enough into this page to show how much i love
+          this show. it is actually the best and i don't know how to word
+          everything i feel about it &gt;p&lt;
+        </p>
+        <p>
+          Bluey has become a super duper comfort show for me and I really hope
+          to see it continue. waiting for the movie in 2027, and I really hope a
+          Season 4!
+        </p>
+        <img
+          style="display: block; width: 90%; margin: auto"
+          src="/img/bluey/renders/Heeler_Family_Splash_2.webp"
+          alt="The Heeler Family! From left to right, Bandit, Bingo, Bluey, and Chilli, all striking a pose forwards towards the camera."
+        />
+      </div>
+    </div>
+    <footer>
+      <a href="//purpld.atabook.org/"
+        ><img
+          src="/img/buttons/signguest.gif"
+          alt="Sign my GUEST BOOK"
+          class="button"
+      /></a>
+      <p>
+        BLUEY&trade; and character logo&trade; are trademarks of Ludo Studio. I
+        don't own anything. Legal legal legal, something... something.
+      </p>
+      <p>
+        This website is not affiliated with Ludo Studio or the British
+        Broadcasting Corporation.
+      </p>
+      <p>
+        This fan page uses some assets sourced from or directly linked to the
+        official <a href="https://bluey.tv/">bluey.tv</a> site.
+      </p>
+      <img
+        style="
+          display: block;
+          width: 50em;
+          max-width: 100%;
+          margin: auto;
+          margin-bottom: 25px;
+        "
+        src="/img/bluey/renders/Jump_bluey_bingo.webp"
+        role="presentation"
+        loading="lazy"
+      />
+    </footer>
+  </body>
+</html>

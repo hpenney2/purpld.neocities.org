@@ -1,0 +1,528 @@
+/* From https://www.bluey.tv/ */
+@font-face {
+  font-family: "open-sans";
+  src:
+    local("open-sans"),
+    url("/fonts/OpenSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "hello";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("hello"),
+    url("/fonts/hello-headline.woff") format("woff");
+}
+
+:root,
+body {
+  --cl__white: #ffffff;
+  --cl__off-white: #f4f4f4;
+  --cl__black: #000000;
+  --cl__black--rgb: 0, 0, 0;
+  --cl__cornflower-blue--two: #6398f5;
+  --cl__cornflower-blue--three: #3695d9;
+  --cl__portage: #7794eb;
+  --cl__cornflower: #87c0e8;
+  --cl__french-pass: #c2e3fe;
+  --cl__pattens-blue: #d4eafe;
+  --cl__link-water: #ecf5fa;
+  --cl__jagged-ice: #c6ede3;
+  --cl__mint-tulip: #c4f1e7;
+  --cl__polar: #d6f5ee;
+  --cl__tea-green: #d4eeba;
+  --cl__spring-sun: #f5ffdf;
+  --cl__orinoco: #e5fbc9;
+  --cl__aqua-forest: #5b9f77;
+  --cl__aqua-forest--rgb: 91, 159, 119;
+  --cl__amazon: #226252;
+  --cl__corduroy: #5a6c69;
+  --cl__perfume: #dcd2fb;
+  --cl__scorpion: #5b5b5b;
+  --cl__mule-fawn: #9b5e33;
+  --cl__buff: #f1dc86;
+  --cl__wewak: #f09aae;
+  --cl__chinook: #a0e3b6;
+  --cl__riptide: #77e0c7;
+  --cl__clear-day: #e9fffa;
+  --cl__blue: #82c9ff;
+  --cl__dark-blue: #060821;
+  --cl__purple: #5a5a87;
+  --cl__brown: #9c5d32;
+  --cl__light-burgundy: #97394e;
+  --cl__dusk: #434365;
+  --cl__iron: #e6e7e8;
+  --cl__manatee: #9e9e9f;
+  --cl__mulled-wine: #4d3f61;
+  --cl__martinique: #3e3152;
+  --cl__sail: #ade0f9;
+  --cl__riptide: #77e0c7;
+  --cl__dusk-two: #52527c;
+  --cl__dusk-three: #5a5a87;
+  --cl__slate-blue: #69699b;
+  --cl__scampi: #5e5ea0;
+  --cl__fiord: #4c4c77;
+  --cl__fiord--two: #43436d;
+  --cl__athens-grey: #f0f0f4;
+  --cl__east-bay: #4e4e7a;
+  --cl__error: #f86468;
+  --cl__success: #77e0c7;
+  --cl__malibu: #6bc0fd;
+  --cl__charlotte: #c4e9fb;
+  --cl__sail: #abe0fa;
+  --cl__royal-blue: #3862e2;
+  --cl__royal-blue--two: #3b65e3;
+  --cl__royal-blue--three: #355ee0;
+  --cl__comet: #5a5a87;
+  --cl__comet--two: #52527f;
+  --cl__sky-blue: #c2e3f3;
+  --cl__moon: #d8d7f8;
+  --cl__mint: #cbf3ea;
+  --cl__curious-blue: #2f8ad4;
+  --cl_background-color: var(--cl__french-pass);
+  --cl__menu-item-background--active: var(--cl__athens-grey);
+  --cl__menu-item-foreground--active: var(--cl__comet);
+  --cl__menu-item-background--hover: var(--cl__comet);
+  --cl__menu-item-foreground--hover: var(--cl__white);
+  --cl__footer-background: var(--cl__purple);
+  --cl__footer-button--background: var(--cl__white);
+  --cl__footer-subscribe-button--background: var(--cl__sail);
+  --cl__footer-button--foreground: var(--cl__comet);
+  --cl__footer-button--focus: var(--cl__charlotte);
+  --cl__footer-button--hover: var(--cl__charlotte);
+  --cl__footer-button--active: var(--cl__charlotte);
+  --cl__primary-header: var(--cl__dusk-three);
+  --cl__secondary-header: var(--cl__brown);
+  --cl__body-copy: var(--cl__dusk-three);
+  --cl__primary-button--background: var(--cl__comet);
+  --cl__primary-button--foreground: var(--cl__white);
+  --cl__primary-button--focus: var(--cl__manatee);
+  --cl__primary-button--hover: var(--cl__east-bay);
+  --cl__primary-button--active: var(--cl__fiord--two);
+  --cl__cookie-message--background: var(--cl__dusk-two);
+  --cl__cookie-message--foreground: var(--cl__white);
+  --cl__cookie-message--copy: var(--cl__riptide);
+  --cl__button--background: var(--cl__riptide);
+  --cl__post-grid-counters: var(--cl__comet);
+  --cl__post-card--title-hover: var(--cl__scampi);
+
+  --cl__background-color: var(--cl__french-pass);
+
+  --title-gradient_start: #72b9f9;
+  --title-gradient_end: #94d6f1;
+}
+
+* {
+  color: var(--cl__body-copy);
+  font-family: "open-sans", "arial", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cl__background-color);
+  color: var(--cl__body-copy);
+  font:
+    normal 100% "open-sans",
+    "arial",
+    "sans-serif";
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-size: 120%;
+}
+
+#blueyContainerOuter {
+  margin: 1em auto;
+
+  width: 1000px;
+  max-width: 90%;
+  position: relative;
+}
+
+#blueyContainer {
+  /* margin: 1em auto; */
+  /* position: relative; */
+  /* width: 1000px;
+  max-width: 90%; */
+  padding: 15px;
+  /* min-height: 100vh; */
+  /* border: solid #0075BD 2px; */
+  border: solid var(--cl__body-copy) 6px;
+  border-radius: 15px;
+  /* box-shadow: white 0 0 0 5px; */
+  color: inherit;
+  overflow: hidden;
+  min-height: 90vh;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--title-gradient_end) 15%,
+    30%,
+    rgb(114, 185, 249, 0)
+  );
+}
+
+a:link,
+a:visited {
+  color: var(--cl__primary-button--background);
+}
+
+p,
+em,
+strong,
+small,
+li,
+a {
+  color: inherit;
+  font-family: unset;
+}
+
+footer {
+  color: inherit;
+  margin: auto;
+  text-align: center;
+  font-size: smaller;
+  margin: 0 1em;
+}
+
+.blueyBanner {
+  padding: 1em;
+  margin: -15px;
+  background-image: linear-gradient(
+    180deg,
+    var(--title-gradient_start) 10%,
+    30%,
+    var(--title-gradient_end)
+  );
+}
+
+.blueyBanner > .banner {
+  margin: auto;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav */
+.navCrumb {
+  display: inline-block;
+}
+
+.navCrumb a::after {
+  display: inline-block;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.navCrumbs ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navCrumbs {
+  /* position: absolute; */
+  /* margin: -15px 0; */
+  text-align: center;
+  margin: 1em;
+}
+
+.boldText {
+  /* color: var(--cl__primary-button--foreground); */
+  filter: drop-shadow(3px 3px var(--cl__primary-button--foreground));
+  /* filter: unset; */
+  /* -webkit-text-stroke: 5px var(--cl__body-copy); */
+  /* paint-order: stroke fill; */
+}
+
+a:has(.nf-fa-play) {
+  text-decoration: none;
+}
+
+.nf-fa-play:hover {
+  color: var(--cl__primary-button--hover);
+}
+
+.quoteList {
+  list-style: none;
+  padding: 0;
+}
+
+.quoteList > li,
+blockquote.quote {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 80%;
+}
+
+blockquote.quote {
+  background-color: var(--cl__off-white);
+  margin: 1em auto;
+}
+
+.quoteList > li + li {
+  margin-top: 1em;
+}
+
+.quoteList > li:nth-child(even) {
+  margin-left: auto;
+}
+
+.quoteList cite,
+blockquote.quote cite {
+  font-style: unset;
+}
+
+.subText {
+  text-align: right;
+  opacity: 80%;
+  margin: 0;
+}
+
+.bluey {
+  font-family: "hello", "open-sans", "arial", "sans-serif";
+  font-size: 1.2em;
+}
+
+.warning {
+  text-align: center;
+  padding: 0.5em;
+  border: 5px solid var(--cl__cornflower-blue--two);
+  border-radius: 10px;
+  background-color: #ffffffa0;
+}
+
+#episodes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#episodes details {
+  border: 4px solid var(--cl__body-copy);
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: var(--cl__white);
+
+  flex-basis: 100%;
+  height: fit-content;
+}
+
+@media (orientation: landscape) {
+  #episodes details {
+    flex-basis: calc(50% - 0.25em);
+  }
+}
+
+#episodes details[open] > summary {
+  margin-bottom: 0.5em;
+}
+
+/* this disables the marker which is normally there because it's normally a list item! */
+#episodes details > summary {
+  display: block;
+  cursor: pointer;
+}
+
+/* and now we replace it with ours! :D */
+#episodes details > summary:before {
+  vertical-align: middle;
+  content: "";
+  background-image: url("/img/bluey/marker.svg");
+  background-size: 1.2em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-origin: border-box;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  margin: 0 5px;
+
+  transition: 1s transform ease-out;
+}
+
+#episodes details[open] > summary:before {
+  transform: rotate(360deg);
+}
+
+#episodes .description {
+  display: block;
+  opacity: 80%;
+  margin: 0.5em;
+}
+
+#episodes p {
+  margin: 0.5em 0;
+}
+
+#episodes img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+div:has(> .watchButton) {
+  text-align: right;
+}
+
+.watchButton {
+  display: inline-block;
+  padding: 8px 12px;
+  /* margin: 0.5em; */
+  background-color: var(--cl__primary-button--background);
+  border-color: var(--cl__primary-button--background);
+  color: var(--cl__primary-button--foreground) !important;
+  border: none;
+  border-radius: 28px;
+  text-decoration: none;
+  cursor: pointer;
+
+  font-family: "hello", "open-sans", "arial", "sans-serif";
+  font-size: 1.2em;
+}
+
+.watchButton:hover {
+  background-color: var(--cl__primary-button--hover);
+}
+
+#sideImages {
+  --n-images: 14;
+  --size: 200px;
+}
+
+@media (orientation: portrait) or (max-width: 1200px) {
+  #sideImages {
+    display: none;
+  }
+}
+
+/* mild disbelief/surprise that i actually figured out that math for myself without any help (cs major btw) */
+#sideImages img {
+  position: absolute;
+  height: var(--size);
+  top: calc(100% / (var(--n-images) + 1) - 5%);
+  right: -25%;
+  /* rotate: -15deg; */
+}
+
+#sideImages img:nth-child(even) {
+  right: 0;
+  left: -25%;
+  /* rotate: 15deg; */
+}
+
+/* oh GOD okay sorry this sucks! but apparently CSS doesn't have an index variable!
+   i hate CSS! :3 3: 
+   i feel like i'm writing the isEven function that's just a chain of if statements
+   */
+#sideImages img:nth-child(2) {
+  top: calc(100% / (var(--n-images) + 1) * 2 - var(--size));
+}
+#sideImages img:nth-child(3) {
+  top: calc(100% / (var(--n-images) + 1) * 3 - var(--size));
+}
+#sideImages img:nth-child(4) {
+  top: calc(100% / (var(--n-images) + 1) * 4 - var(--size));
+}
+#sideImages img:nth-child(5) {
+  top: calc(100% / (var(--n-images) + 1) * 5 - var(--size));
+}
+#sideImages img:nth-child(6) {
+  top: calc(100% / (var(--n-images) + 1) * 6 - var(--size));
+}
+#sideImages img:nth-child(7) {
+  top: calc(100% / (var(--n-images) + 1) * 7 - var(--size));
+}
+#sideImages img:nth-child(8) {
+  top: calc(100% / (var(--n-images) + 1) * 8 - var(--size));
+}
+#sideImages img:nth-child(9) {
+  top: calc(100% / (var(--n-images) + 1) * 9 - var(--size));
+}
+#sideImages img:nth-child(10) {
+  top: calc(100% / (var(--n-images) + 1) * 10 - var(--size));
+}
+#sideImages img:nth-child(11) {
+  top: calc(100% / (var(--n-images) + 1) * 11 - var(--size));
+}
+#sideImages img:nth-child(12) {
+  top: calc(100% / (var(--n-images) + 1) * 12 - var(--size));
+}
+#sideImages img:nth-child(13) {
+  top: calc(100% / (var(--n-images) + 1) * 13 - var(--size));
+}
+#sideImages img:nth-child(14) {
+  top: calc(100% / (var(--n-images) + 1) * 14 - var(--size));
+}
+#sideImages img:nth-child(15) {
+  top: calc(100% / (var(--n-images) + 1) * 15 - var(--size));
+}
+
+/* unused for now, but intended for the Heeler family splash at the bottom */
+.float {
+  position: relative;
+  animation: float 2.5s ease-in-out infinite alternate;
+  image-rendering: auto;
+}
+
+@keyframes float {
+  from {
+    bottom: 5px;
+  }
+
+  to {
+    bottom: -5px;
+  }
+}
+
+.inlineImg {
+  width: auto !important;
+  border-radius: 0 !important;
+}
+
+#music {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+
+#music > * {
+  margin: 0.75em;
+  text-align: center;
+  width: 100%;
+  max-width: 18em;
+}
+
+#music img {
+  max-width: 15em;
+  width: 100%;
+  border: 5px solid var(--cl__cornflower-blue--two);
+}
+#music .subText {
+  font-size: smaller;
+  margin-bottom: 0.2em;
+}
+#music ol {
+  /* padding-left: 20px; */
+}
+
+hr {
+  border-style: solid;
+}
+
+#music .single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+#music .single img {
+  max-width: 5em;
+}
