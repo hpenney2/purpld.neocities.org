@@ -231,6 +231,10 @@ body {
   font-size: 0;
 }
 
+.shrineList img {
+  image-rendering: pixelated;
+}
+
 #defragEntries {
   list-style: none;
   background-color: rgba(0, 0, 0, 0.8);
