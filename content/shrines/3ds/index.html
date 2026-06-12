@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nintendo 3DS</title>
+
+    <link rel="stylesheet" href="/style.css{{ nocache }}" />
+    <link rel="stylesheet" href="3ds.css" />
+
+    <link rel="shortcut icon" href="/img/3DS/3ds.ico" type="image/x-icon" />
+    <link rel="preload" as="font" href="/fonts/FOT-RodinNTLG Pro M.otf" />
+
+    <link rel="preload" as="image" href="/img/3DS/3ds_xl_base_power_on.png" />
+
+    <script src="3ds.js" defer></script>
+
+    <title>Nintendo 3DS ~ PURPLD'S WORLD</title>
+    <meta property="og:site_name" content="~ PURPLD'S WORLD ~" />
+    <meta property="og:title" content="Nintendo 3DS" />
+    <meta
+      property="og:description"
+      content="Wii would like to play. Wait, that's not the right... uh..."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://purpld.neocities.org/img/me_checkers.png"
+    />
+    <meta
+      property="og:url"
+      content="https://purpld.neocities.org/shrines/3ds"
+    />
+    <meta name="theme-color" content="var(--cl__body-copy)" />
+
+    <base target="_blank" />
+  </head>
+  <body>
+    <div id="console">
+      <img
+        class="base"
+        src="/img/3DS/3ds_xl_base.png"
+        alt="3DS XL"
+        loading="eager"
+        draggable="false"
+      />
+      <img
+        class="base on"
+        src="/img/3DS/3ds_xl_base_power_on.png"
+        alt="3DS XL"
+        loading="eager"
+        draggable="false"
+      />
+      <div id="topScreen"></div>
+      <div id="bottomScreen"></div>
+      <button id="power" onclick="togglePower()" aria-label="Power"></button>
+      <p id="powerHint">try turning the power on!</p>
+    </div>
+  </body>
+</html>

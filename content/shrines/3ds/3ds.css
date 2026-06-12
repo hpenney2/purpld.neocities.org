@@ -1,0 +1,108 @@
+@font-face {
+  font-family: RodinNTLG;
+  src: url("/fonts/FOT-RodinNTLG Pro M.otf") format("opentype");
+  font-display: block;
+}
+
+body {
+  background-color: #0a0a0c;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: RodinNTLG, Arial, Helvetica, sans-serif !important;
+}
+
+#console {
+  /* center! */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* strecthing issues part 1 */
+  /* width: 1000px; */
+  /* height: auto; */
+  /* height: 846px; */
+  /* max-width: 100dvw; */
+  /* max-height: 100dvh; */
+  aspect-ratio: 1000 / 846;
+}
+
+#console > * {
+  max-width: 100%;
+  max-height: 100%;
+  /* z-index: -1; */
+}
+
+.base {
+  z-index: 1;
+  vertical-align: middle;
+
+  /* stretching issues part 2*/
+  /* height: 100%;
+  width: 100%; */
+  transition: opacity 1s;
+
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.base.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* having this on causes it to flicker a little bit and i just realized we don't actually need to lol */
+/* #console[data-on] > .base {
+  opacity: 0;
+} */
+
+#console[data-on] > .base.on {
+  opacity: 1;
+}
+
+/* measured by selecting in Krita and calculating the ratios (percentages)
+   using the actual image resolution! */
+/* i can't just use px because it doesn't scale :') */
+#topScreen {
+  position: absolute;
+  width: 47.9%;
+  height: 34.6336%;
+  background-color: black;
+  top: 11.229%;
+  left: 26%;
+  z-index: -1;
+}
+
+#bottomScreen {
+  position: absolute;
+  width: 38.5%;
+  height: 34.397%;
+  background-color: black;
+  top: 54.2553%;
+  left: 30.8%;
+  z-index: -1;
+}
+
+button#power {
+  position: absolute;
+  width: 3.2%;
+  height: 3.6643%;
+  top: 86.643026%;
+  left: 71.9%;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#powerHint {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+}
